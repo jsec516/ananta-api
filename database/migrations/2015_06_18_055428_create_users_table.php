@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->integer('primary_practitioner_id')->unsigned();
             $table->timestamp('last_');
             $table->timestamps();
-            $table->primary('id');
+            
         });
     }
 
