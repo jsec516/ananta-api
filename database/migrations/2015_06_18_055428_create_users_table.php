@@ -13,7 +13,18 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->increments('id');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('email');
+            $table->string('password');
+            $table->integer('security_question_id')->unsigned();
+            $table->string('security_answer');
+            $table->enum('registered_as', ['owner', 'clinic_member', 'patient', 'practitioner']);
+            $table->integer('primary_practitioner_id')->unsigned();
+            $table->timestamp('last_');
+            $table->timestamps();
+            $table->primary('id');
         });
     }
 
@@ -24,8 +35,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('users');
     }
 }
