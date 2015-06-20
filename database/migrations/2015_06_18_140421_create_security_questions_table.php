@@ -16,7 +16,7 @@ class CreateSecurityQuestionsTable extends Migration
             $table->increments('id');
             $table->string('question');
             $table->integer('clinic_id')->unsigned();
-            $table->integer('clinic_user_id')->unsigned();
+            $table->integer('clinic_user_id');
             $table->timestamps();
         });
     }

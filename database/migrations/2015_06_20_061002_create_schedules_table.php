@@ -14,6 +14,16 @@ class CreateSchedulesTable extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('mon');
+            $table->string('tue');
+            $table->string('wed');
+            $table->string('thu');
+            $table->string('fri');
+            $table->string('sat');
+            $table->string('sun');
+            //@TODO: add STI information
+            $table->integer('clinic_id')->unsigned()->index();
+            $table->integer('clinic_user_id')->unsigned();
             $table->timestamps();
         });
     }

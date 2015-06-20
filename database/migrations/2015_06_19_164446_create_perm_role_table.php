@@ -16,7 +16,7 @@ class CreatePermRoleTable extends Migration
         	$table->integer('role_id')->unsigned();
         	$table->integer('permission_id')->unsigned();
             $table->integer('clinic_id')->unsigned();
-            $table->integer('clinic_user_id')->unsigned();
+            $table->integer('clinic_user_id');
             $table->timestamps();
         });
     }

@@ -22,8 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('security_answer');
             $table->enum('registered_as', ['owner', 'clinic_member', 'patient', 'practitioner']);
             $table->integer('primary_practitioner_id')->unsigned();
-            $table->integer('clinic_id')->unsigned();
-            $table->integer('clinic_user_id')->unsigned();
+            $table->integer('clinic_id')->unsigned()->index();
+            $table->integer('clinic_user_id');
             $table->timestamps();
             
         });

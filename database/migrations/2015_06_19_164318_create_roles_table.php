@@ -16,7 +16,7 @@ class CreateRolesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('clinic_id')->unsigned();
-            $table->integer('clinic_user_id')->unsigned();
+            $table->integer('clinic_user_id');
             $table->timestamps();
         });
     }
