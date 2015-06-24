@@ -13,7 +13,8 @@ class CreateRoomServiceTable extends Migration
     public function up()
     {
         Schema::create('room_service', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('room_id')->unsigned()->index();
+            $table->integer('service_id')->unsigned()->index();
             $table->timestamps();
         });
     }

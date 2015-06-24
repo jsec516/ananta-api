@@ -21,7 +21,8 @@ class CreateSchedulesTable extends Migration
             $table->string('fri');
             $table->string('sat');
             $table->string('sun');
-            //@TODO: add STI information
+            $table->integer('schedulable_id')->unsigned()->index();
+            $table->string('schedulable_type');
             $table->integer('clinic_id')->unsigned()->index();
             $table->integer('clinic_user_id')->unsigned();
             $table->timestamps();

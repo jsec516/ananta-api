@@ -14,6 +14,14 @@ class CreateServicesTable extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
+            $table->string('code');
+            $table->tinyInteger('duration');
+            $table->boolean('allow_multiple');
+            $table->tinyInteger('interval');
+            $table->string('color');
+            $table->integer('clinic_id')->unsigned()->index();
+            $table->integer('clinic_user_id')->unsigned();
             $table->timestamps();
         });
     }
