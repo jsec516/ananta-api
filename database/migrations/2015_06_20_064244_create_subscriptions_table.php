@@ -12,8 +12,15 @@ class CreateSubscriptionsTable extends Migration
      */
     public function up()
     {
-        Schema::table('subscriptions', function (Blueprint $table) {
-            //
+        Schema::create('subscriptions', function (Blueprint $table) {
+			$table->increments('id');
+            $table->timestamps('started_at');
+            $table->timestamps('ended_at');
+            $table->timestamps('paid_at');
+            $table->decimal('amount',3,2);
+            $table->integer('clinic_id')->unsigned()->index();
+            $table->integer('clinic_user_id')->unsigned();
+            $table->timestamps();
         });
     }
 

@@ -14,6 +14,11 @@ class CreateWaitingsTable extends Migration
     {
         Schema::create('waitings', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('service_id')->unsigned()->index();
+            $table->integer('practitioner_id')->unsigned()->index();
+            $table->integer('patient_id')->unsigned()->index();
+            $table->integer('clinic_id')->unsigned()->index();
+            $table->integer('clinic_user_id')->unsigned();
             $table->timestamps();
         });
     }

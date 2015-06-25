@@ -16,7 +16,7 @@ class CreateCitiesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('slug');
-            $table->integer('country_id')->unsigned();
+            $table->integer('country_id')->unsigned()->index();
             $table->timestamps();
         });
     }
