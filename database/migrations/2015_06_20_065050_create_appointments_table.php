@@ -15,8 +15,8 @@ class CreateAppointmentsTable extends Migration
         Schema::create('appointments', function (Blueprint $table) {
             $table->increments('id');
             $table->enum('type', ['regular', 'break-prac', 'break-clinic']);
-            $table->timestamps('start_time');
-            $table->timestamps('end_time');
+            $table->timestamp('start_time');
+            $table->timestamp('end_time');
             $table->integer('duration');
             $table->integer('service_id')->unsigned()->index();
             $table->integer('practitioner_id')->unsigned()->index();

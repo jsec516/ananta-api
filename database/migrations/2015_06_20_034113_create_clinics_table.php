@@ -17,10 +17,10 @@ class CreateClinicsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('subdomain');
-            $table->string('country_id')->unsigned();
-            $table->string('city_id')->unsigned();
+            $table->integer('country_id')->unsigned();
+            $table->integer('city_id')->unsigned();
             $table->string('address');
-            $table->timestamps('published_at');
+            $table->timestamp('published_at');
             $table->timestamps();
         });
     }
