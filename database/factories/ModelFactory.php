@@ -11,11 +11,21 @@
 |
 */
 
-$factory->define(App\User::class, function ($faker) {
+$factory->define(App\Models\User::class, function ($faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->email,
         'password' => str_random(10),
         'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(App\Models\Clinic::class, function ($faker) {
+    return [
+        'name' => $faker->name,
+        'email' => $faker->email,
+        'subdomain' => $faker->subdomain,
+        'country_id' => $faker->country_id,
+    	'city_id' => $faker->city_id,
     ];
 });
