@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -13,10 +14,14 @@
 
 $factory->define(App\Models\User::class, function ($faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->email,
-        'password' => str_random(10),
-        'remember_token' => str_random(10),
+    	'id' => 1,
+    	'first_name' => 'Alexendre',
+    	'last_name' => 'Treatzakov',
+    	'email' => $faker->email,
+        'password' => 'alexmine',
+    	'security_question_id' => 1,
+    	'security_answer' => 'revenge',
+    	'registered_as' => 'owner',
     ];
 });
 
@@ -24,8 +29,10 @@ $factory->define(App\Models\Clinic::class, function ($faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->email,
-        'subdomain' => $faker->subdomain,
-        'country_id' => $faker->country_id,
-    	'city_id' => $faker->city_id,
+        'subdomain' => str_random(5),
+        'country_id' => '2',
+    	'city_id' => '1',
+    	'address' => 'Bonnyville, +1 780 573 1775, 5502 - 54th Street',
+    	'published_at' => Carbon::now()
     ];
 });

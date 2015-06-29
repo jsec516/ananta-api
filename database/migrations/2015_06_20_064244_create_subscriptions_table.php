@@ -31,8 +31,6 @@ class CreateSubscriptionsTable extends Migration
      */
     public function down()
     {
-        Schema::table('subscriptions', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('subscriptions');
     }
 }
