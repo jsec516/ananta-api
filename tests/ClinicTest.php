@@ -34,7 +34,7 @@ class ClinicTest extends TestCase
     			'email' => 'calwebprob'.str_random(5).'@gmail.com'
     		]));
     	});
-    	$this->seeInDatabase('clinics', ['email' => 'Canadian Diagnostics Center']);
+    	$this->seeInDatabase('clinics', ['name' => 'Canadian Diagnostics Center']);
     	$this->seeInDatabase('users', ['first_name' => 'Alexendre']);
     }
 }
