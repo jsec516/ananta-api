@@ -14,7 +14,6 @@ use Carbon\Carbon;
 
 $factory->define(App\Models\User::class, function ($faker) {
     return [
-    	'id' => 1,
     	'first_name' => 'Alexendre',
     	'last_name' => 'Treatzakov',
     	'email' => $faker->email,

@@ -13,11 +13,6 @@ class ClinicTest extends TestCase
      */
     public function testItCanCreateClinic()
     {
-    	/*
-    	 * factory(App\Models\User::class)->make([
-        	'email' => 'calwebprob@gmail.com',
-		])
-    	 */
     	
         $clinic_cdc = factory(App\Models\Clinic::class)->make([
 			'name' => 'Canadian Diagnostics Center',
@@ -26,5 +21,20 @@ class ClinicTest extends TestCase
         
         $clinic_cdc->save();
         $this->seeInDatabase('clinics', ['email' => 'cdc@gmail.com']);
+    }
+    
+    public function testItCanCreateClinicUser(){
+    	$clinics = factory(App\Models\Clinic::class,2)
+    	->create([
+    			'name' => 'Canadian Diagnostics Center',
+    			'email' => 'cdc'.str_random(5).'@gmail.com',
+    	])
+    	->each(function($c) {
+    		$c->users()->save(factory(App\Models\User::class)->make([
+    			'email' => 'calwebprob'.str_random(5).'@gmail.com'
+    		]));
+    	});
+    	$this->seeInDatabase('clinics', ['email' => 'Canadian Diagnostics Center']);
+    	$this->seeInDatabase('users', ['first_name' => 'Alexendre']);
     }
 }
