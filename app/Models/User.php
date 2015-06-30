@@ -9,6 +9,13 @@ use Illuminate\Database\Eloquent\Model;
 class User extends Model  
 {
 	/**
+	 * The attributes that are mass assignable.
+	 *
+	 * @var array
+	 */
+	protected $fillable = ['first_name','last_name','email','password','security_answer','clinic_id','clinic_user_id'];
+	
+	/**
 	 * Get the post that owns the comment.
 	 */
 	public function clinic()

@@ -14,3 +14,7 @@
 $app->get('/', function() use ($app) {
     return $app->welcome();
 });
+
+$app->post('user/profile', [
+	'as' => 'save_user', 'uses' => 'UserController@store'
+]);
