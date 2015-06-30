@@ -15,6 +15,10 @@ $app->get('/', function() use ($app) {
     return $app->welcome();
 });
 
+	$app->get('user/', [
+	'as' => 'get_user', 'uses' => 'UserController@repoPractice'
+]);
+
 $app->post('user/profile', [
 	'as' => 'save_user', 'uses' => 'UserController@store'
 ]);

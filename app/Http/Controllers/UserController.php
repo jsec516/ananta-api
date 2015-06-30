@@ -4,10 +4,24 @@ use Hash;
 use Illuminate\Http\Request;
 use Laravel\Lumen\Routing\Controller as BaseController;
 use App\Models;
+use App\Repositories\FooRepository;
 
 class UserController extends BaseController
 {
+	private $repository;
 	
+	public function __construct(FooRepository $repository)
+	{
+		$this->repository = $repository;
+	}
+	
+	public function repoPractice(){
+		 
+		 /*
+		  * good practice (via constructor injection)
+		  */
+		 return $this->repository->users();
+	}
 	
 	/**
      * Store a new user for a clinic.
@@ -17,6 +31,7 @@ class UserController extends BaseController
      */
     public function store(Request $request)
     {
+    	
         $user_info = $request->input('user_info');
         $user_info['password'] = Hash::make($user_info['password']);
 		$user = User::create($user_info);
