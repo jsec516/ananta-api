@@ -19,6 +19,10 @@ $app->get('/', function() use ($app) {
 	'as' => 'get_user', 'uses' => 'UserController@repoPractice'
 ]);
 
-$app->post('user/profile', [
+$app->post('user/save', [
 	'as' => 'save_user', 'uses' => 'UserController@store'
+]);
+
+$app->post('clinic/save', [
+		'as' => 'save_clinic', 'uses' => 'ClinicController@store'
 ]);
