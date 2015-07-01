@@ -11,7 +11,7 @@ class ClinicTest extends TestCase
      *
      * @return void
      */
-    public function testItCanCreateClinic()
+    /* public function testItCanCreateClinic()
     {
     	
         $clinic_cdc = factory(App\Models\Clinic::class)->make([
@@ -21,7 +21,7 @@ class ClinicTest extends TestCase
         
         $clinic_cdc->save();
         $this->seeInDatabase('clinics', ['email' => 'cdc@gmail.com']);
-    }
+    } */
     
     public function testItCanCreateClinicUser(){
     	$clinics = factory(App\Models\Clinic::class,2)
