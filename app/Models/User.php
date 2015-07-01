@@ -13,7 +13,7 @@ class User extends Model
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['first_name','last_name','email','password','security_answer','clinic_id','clinic_user_id'];
+	protected $fillable = ['first_name','last_name','email','password','security_answer','security_question_id','clinic_id','clinic_user_id'];
 	
 	/**
 	 * Get the post that owns the comment.
