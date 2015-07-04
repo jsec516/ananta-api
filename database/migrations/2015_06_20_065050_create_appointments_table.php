@@ -17,10 +17,10 @@ class CreateAppointmentsTable extends Migration
             $table->enum('type', ['regular', 'break-prac', 'break-clinic']);
             $table->timestamp('start_time');
             $table->timestamp('end_time');
-            $table->integer('duration');
             $table->integer('service_id')->unsigned()->index();
             $table->integer('practitioner_id')->unsigned()->index();
             $table->integer('patient_id')->unsigned()->index();
+            $table->enum('status', ['upcoming', 'cancelled', 'successful', 'expired']);
             $table->integer('clinic_id')->unsigned()->index();
             $table->integer('clinic_user_id')->unsigned();
             $table->timestamps();
