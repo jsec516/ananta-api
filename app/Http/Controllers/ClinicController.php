@@ -13,14 +13,17 @@ class ClinicController extends BaseController
 	{
 		$this->repository = $repository;
 	}
+	
 	/**
      * Store a new clinic
+     * 
+     * @return array
      */
     public function store(Request $request)
     {
     	$validator = Validator::make($request->input('clinic'), [
             'name' => 'required|max:255',
-            'email' => 'required',
+            'email' => 'required|email',
         ]);
 
         if ($validator->fails()) {
