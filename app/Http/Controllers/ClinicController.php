@@ -27,7 +27,7 @@ class ClinicController extends BaseController
         ]);
 
         if ($validator->fails()) {
-            return [ 'status' => 'validation_failure' ];
+            return [ 'status' => 'validation_failure', $validator->errors() ];
         }
     	
 		$clinic = $this->repository->setupClinic($request);
