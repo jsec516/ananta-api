@@ -18,14 +18,17 @@ $app->get ( '/', function () use($app) {
 		'as' => 'get_user',
 		'uses' => 'UserController@repoPractice' 
 ]);*/
-
+// save user
 $app->post ( 'user/save', [ 
 		'as' => 'save_user',
 		'uses' => 'UserController@store' 
 ]);
-
+// save clinic
 $app->post ( 'clinic/save', [ 
 		'as' => 'save_clinic',
 		'uses' => 'ClinicController@store' 
 ]);
-
+//@TODO: save, delete, deactivate, activate for clinic
+//@TODO: save, delete, deactivate, activate for user
+//@TODO: subscribe, unsubscribe, checkSubscription for clinic
+//@TODO: save, delete, deactivate, activate for user
