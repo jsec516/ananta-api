@@ -1,0 +1,58 @@
+.navbar{
+	margin-bottom: 10px;
+}
+.user-logged-in{
+	font-size: 15px;
+}
+.user-logged-in a{
+	padding-left: 10px;
+}
+#weeklyView{
+  box-shadow: 0 2px 0 rgba(0,0,0,0.07);
+  width: 942px;
+}
+#weeklyView  .row{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+#weeklyView >.row{
+	border-bottom: 1px solid rgba(0,0,0,0.15);
+	border-left: 1px solid rgba(0,0,0,0.07);
+	border-right: 1px solid rgba(0,0,0,0.15);
+}
+#weeklyView >.row:nth-child(1){
+	background: #5fcf80;
+	-webkit-transition: background-color 2s ease-in-out;
+	transition: background-color 2s ease-in-out;
+	background: #39ADD1;
+	border-radius: 4px 4px 0 0;
+	/*height: 50px;*/
+}
+
+#weeklyView >.row:nth-child(1)> .week-col{
+	/*height: 50px;*/
+}
+
+#weeklyView  .week-col{
+	width: 120px;
+	height: 36px;
+	border-right: 1px solid rgba(0,0,0,0.15);
+}
+#weeklyView >.row > div:nth-child(8){
+	border-right: 0px;
+}
+#weeklyView >.row > div:nth-child(1){
+	width: 100px;
+	/*background: rgba(109, 113, 116, 0.5);*/
+	background: #2f4154;
+}
+
+#weeklyView > div:nth-child(1) > div:nth-child(1){
+	background: #39ADD1;
+}
+
+/*.calendar-item{
+	background-image:url(../images/calendar_hover.png);
+	background-repeat: no-repeat;
+	background-position: 0% 50%;
+}*/
