@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: Qclinic
+        psr4_prefix: Qclinic
+        src_path: app
