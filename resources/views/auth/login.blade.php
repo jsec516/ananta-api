@@ -1,3 +1,4 @@
+@if ($isAdminSide)
 @extends('layouts.master')
 @section('content')
 {{Former::framework('Nude')}}
@@ -17,3 +18,4 @@
       {!! Former::close() !!}
   </div>
   @endsection
+@endif

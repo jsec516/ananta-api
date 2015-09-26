@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'model' => Qclinic\User::class,
+    'model' => Qclinic\Models\User::class,
 
     /*
     |--------------------------------------------------------------------------

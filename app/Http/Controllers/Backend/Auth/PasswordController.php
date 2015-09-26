@@ -1,6 +1,6 @@
 <?php
 
-namespace Qclinic\Http\Controllers\Auth;
+namespace Qclinic\Http\Controllers\Frontend\Auth;
 
 use Qclinic\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;

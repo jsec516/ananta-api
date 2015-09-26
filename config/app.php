@@ -140,8 +140,9 @@ return [
         /*
          * Application Service Providers...
          */
+        Qclinic\Providers\AccessServiceProvider::class,
         Qclinic\Providers\AppServiceProvider::class,
-        Qclinic\Providers\AuthServiceProvider::class,
+        //Qclinic\Providers\AuthServiceProvider::class,
         Qclinic\Providers\EventServiceProvider::class,
         Qclinic\Providers\RouteServiceProvider::class,
 
@@ -149,6 +150,8 @@ return [
         * Custom service providers
         */
         Former\FormerServiceProvider::class,
+        Webpatser\Countries\CountriesServiceProvider::class,
+        Laracasts\Utilities\JavaScript\JavascriptServiceProvider::class,
 
     ],
 
@@ -199,6 +202,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'Former'    => Former\Facades\Former::class,
+        'Countries' => Webpatser\Countries\CountriesFacade::class,
 
     ],
 

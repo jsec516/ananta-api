@@ -1,6 +1,6 @@
 <?php
 
-namespace Qclinic\Http\Controllers\Auth;
+namespace Qclinic\Http\Controllers\Frontend\Auth;
 
 use Qclinic\User;
 use Validator;

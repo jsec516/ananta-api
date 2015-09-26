@@ -29,5 +29,11 @@ class Kernel extends HttpKernel
         'auth' => \Qclinic\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \Qclinic\Http\Middleware\RedirectIfAuthenticated::class,
+
+        /**
+         * Access Middleware
+         */
+        'access.routeNeedsRole' => \Qclinic\Http\Middleware\RouteNeedsRole::class,
+        'access.routeNeedsPermission' => \Qclinic\Http\Middleware\RouteNeedsPermission::class,
     ];
 }
