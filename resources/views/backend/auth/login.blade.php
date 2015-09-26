@@ -1,4 +1,9 @@
 @extends('backend.layouts.master')
+
+@section('styles')
+<link type="text/css" rel="stylesheet" href="{{ asset('assets/css/login.css') }}"  media="screen,projection"/>
+@endsection
+
 @section('body')
 <body  class="blue darken-3 ">
     <main>

@@ -44,6 +44,17 @@ elixir(function(mix) {
   	);
 
   	// Compile Less
-  	mix.sass('admin.scss', 'public/assets/css/admin.css');
+  	mix.sass('login.scss', 'public/assets/css/login.css');
+
+    //@TODO: need to create admin_all.css
+    /*
+    * materialize
+    * fullcalendar
+    * datatable
+    * schedular
+    * select2
+    */
+
+
     // mix.sass('app.scss');
 });
