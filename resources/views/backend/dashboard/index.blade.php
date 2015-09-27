@@ -1,4 +1,4 @@
-@extend('backend.layouts.master')
+@extends('backend.layouts.admin')
 @section('contents')
 <div class="row mt30">
 	<div class="col s12 m12 l6">
@@ -78,7 +78,7 @@
 				<h4 class="card-stats-number">566</h4>
 			</div>
 			<div class="card-action center-align purple darken-2">
-				<a href="<?php echo BASE_URL; ?>?m=users" class="">Manage Users</a>
+				<a href="<?php echo 'BASE_URL'; ?>?m=users" class="">Manage Users</a>
 			</div>
 		</div>
 	</div>
@@ -89,7 +89,7 @@
 				<h4 class="card-stats-number">566</h4>
 			</div>
 			<div class="card-action center-align green darken-2">
-				<a href="<?php echo BASE_URL; ?>?m=patients" class="">Manage Patients</a>
+				<a href="<?php echo 'BASE_URL'; ?>?m=patients" class="">Manage Patients</a>
 			</div>
 		</div>
 	</div>
@@ -100,7 +100,7 @@
 				<h4 class="card-stats-number">566</h4>
 			</div>
 			<div class="card-action  center-align blue-grey darken-2">
-				<a href="<?php echo BASE_URL; ?>?m=practitioners" class="">Manage Practitioners</a>
+				<a href="<?php echo 'BASE_URL'; ?>?m=practitioners" class="">Manage Practitioners</a>
 			</div>
 		</div>
 	</div>
@@ -111,7 +111,7 @@
 				<h4 class="card-stats-number">566</h4>
 			</div>
 			<div class="card-action center-align pink darken-2">
-				<a href="<?php echo BASE_URL; ?>?m=services" class="">Manage Services</a>
+				<a href="<?php echo 'BASE_URL'; ?>?m=services" class="">Manage Services</a>
 			</div>
 		</div>
 	</div>

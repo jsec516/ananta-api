@@ -1,7 +1,7 @@
 @extends('backend.layouts.master')
 
 @section('styles')
-<link type="text/css" rel="stylesheet" href="{{ asset('assets/css/admin_all.css') }}"  media="screen,projection"/>
+<link type="text/css" rel="stylesheet" href="{{ asset('assets/css/all.css') }}"  media="screen,projection"/>
 @endsection
 
 
@@ -15,7 +15,7 @@
 		@include('backend.includes.nav_right')
 	</main>
 	@include('backend.includes.footer')
-	<script src="{{ asset('assets/js/admin.js') }}"></script>
+	<script src="{{ asset('assets/js/all.js') }}"></script>
 	@yield('scripts')
 </body>
 @endsection

@@ -19,8 +19,8 @@
 			<ul class="right hide-on-med-and-down">
 				<li><a href="" data-activates="chat-out" class="waves-effect waves-block waves-light noti-icon chat-collapse"><i class="material-icons">notifications</i></a></li>
 				<li><a href="" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse"><i class="material-icons">announcement</i></a></li>
-				<li><a href="<?php echo BASE_URL; ?>?m=settings&a=schedule" class="waves-effect waves-block waves-light"><i class=" material-icons">settings</i></a></li>
-				<li><a href="<?php echo BASE_URL; ?>?m=auth&a=logout" class="waves-effect waves-block waves-light"><i class=" material-icons">power_settings_new</i></a></li>
+				<li><a href="<?php echo 'BASE_URL'; ?>?m=settings&a=schedule" class="waves-effect waves-block waves-light"><i class=" material-icons">settings</i></a></li>
+				<li><a href="<?php echo 'BASE_URL'; ?>?m=auth&a=logout" class="waves-effect waves-block waves-light"><i class=" material-icons">power_settings_new</i></a></li>
 			</ul>
 		</div>
 	</nav>
