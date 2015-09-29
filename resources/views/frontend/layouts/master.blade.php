@@ -41,7 +41,7 @@
         @include('includes.footer')
                 
         @yield('before-scripts-end')
-        {!! HTML::script(elixir('assets/js/min_all.js')) !!}
+        {!! HTML::script(elixir('assets/js/f_min_all.js')) !!}
         @yield('after-scripts-end')
 
         @include('includes.partials.ga')

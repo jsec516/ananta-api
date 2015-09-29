@@ -56,7 +56,7 @@ elixir(function(mix) {
       'js/jquery.min.js',
       'js/materialize.min.js',
       'js/perfect-scrollbar.jquery.min.js',
-      'js/app.js'
+      'js/backend/app.js'
       ],
       'public/assets/js/min_all.js',
       'resources/assets')
@@ -64,8 +64,16 @@ elixir(function(mix) {
       'js/jquery.min.js',
       'js/angular.min.js',
       'js/materialize.min.js',
+      'js/frontend/app.js'
+      ],
+      'public/assets/js/f_min_all.js',
+      'resources/assets')
+    .scripts([
+      'js/jquery.min.js',
+      'js/angular.min.js',
+      'js/materialize.min.js',
       'js/perfect-scrollbar.jquery.min.js',
-      'js/app.js'
+      'js/backend/app.js'
       ],
       'public/assets/js/ma_all.js',
       'resources/assets')
@@ -76,7 +84,7 @@ elixir(function(mix) {
       'js/fullcalendar.min.js',
       'js/scheduler.min.js',
       'js/perfect-scrollbar.jquery.min.js',
-      'js/app.js'
+      'js/backend/app.js'
       ],
       'public/assets/js/cal_all.js',
       'resources/assets')
@@ -86,7 +94,7 @@ elixir(function(mix) {
       'js/dataTables.responsive.min.js',
       'js/select2.min.js',
       'js/perfect-scrollbar.jquery.min.js',
-      'js/app.js'
+      'js/backend/app.js'
       ],
       'public/assets/js/tf_all.js',
       'resources/assets')
@@ -94,12 +102,12 @@ elixir(function(mix) {
       'js/jquery.min.js',
       'js/select2.min.js',
       'js/perfect-scrollbar.jquery.min.js',
-      'js/app.js'
+      'js/backend/app.js'
       ],
       'public/assets/js/frm_all.js',
       'resources/assets')
     // Apply version control
-    .version(["public/assets/css/min_all.css", "public/assets/css/cal_all.css", "public/assets/css/tf_all.css", "public/assets/css/frm_all.css", "public/assets/js/min_all.js", "public/assets/js/ma_all.js", "public/assets/js/cal_all.js", "public/assets/js/tf_all.js", "public/assets/js/frm_all.js"])
+    .version(["public/assets/css/min_all.css", "public/assets/css/cal_all.css", "public/assets/css/tf_all.css", "public/assets/css/frm_all.css", "public/assets/js/f_min_all.js", "public/assets/js/min_all.js", "public/assets/js/ma_all.js", "public/assets/js/cal_all.js", "public/assets/js/tf_all.js", "public/assets/js/frm_all.js"])
 });
 /**
  * Copy any needed files.
