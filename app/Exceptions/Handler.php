@@ -18,6 +18,7 @@ class Handler extends ExceptionHandler
     protected $dontReport = [
         HttpException::class,
         ModelNotFoundException::class,
+
     ];
 
     /**
@@ -30,6 +31,10 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $e)
     {
+        if ($e instanceof CustomException) {
+            //
+        }
+
         return parent::report($e);
     }
 
@@ -44,6 +49,17 @@ class Handler extends ExceptionHandler
     {
         if ($e instanceof ModelNotFoundException) {
             $e = new NotFoundHttpException($e->getMessage(), $e);
+        }
+
+        //As to preserve the catch all
+        if ($e instanceof GeneralException)
+        {
+            return redirect()->back()->withInput()->withFlashDanger($e->getMessage());
+        }
+
+        if ($e instanceof Backend\Access\User\UserNeedsRolesException)
+        {
+            return redirect()->route('admin.access.users.edit', $e->userID())->withInput()->withFlashDanger($e->validationErrors());
         }
 
         return parent::render($request, $e);

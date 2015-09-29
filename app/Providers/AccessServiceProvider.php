@@ -35,7 +35,7 @@ class AccessServiceProvider extends ServiceProvider
     {
         $this->registerAccess();
         $this->registerFacade();
-        //$this->registerBindings();
+        $this->registerBindings();
     }
 
     /**
@@ -61,6 +61,46 @@ class AccessServiceProvider extends ServiceProvider
             $loader = \Illuminate\Foundation\AliasLoader::getInstance();
             $loader->alias('Access', \Qclinic\Services\Access\Facades\Access::class);
         });
+    }
+
+    /**
+     * Register service provider bindings
+     */
+    public function registerBindings() {
+        $this->app->bind(
+            \Qclinic\Repositories\Frontend\Auth\AuthenticationContract::class,
+            \Qclinic\Repositories\Frontend\Auth\EloquentAuthenticationRepository::class
+        );
+
+        $this->app->bind(
+            \Qclinic\Repositories\Frontend\User\UserContract::class,
+            \Qclinic\Repositories\Frontend\User\EloquentUserRepository::class
+        );
+
+        $this->app->bind(
+            \Qclinic\Repositories\Backend\User\UserContract::class,
+            \Qclinic\Repositories\Backend\User\EloquentUserRepository::class
+        );
+
+        $this->app->bind(
+            \Qclinic\Repositories\Backend\Role\RoleRepositoryContract::class,
+            \Qclinic\Repositories\Backend\Role\EloquentRoleRepository::class
+        );
+
+        /*$this->app->bind(
+            \App\Repositories\Backend\Permission\PermissionRepositoryContract::class,
+            \App\Repositories\Backend\Permission\EloquentPermissionRepository::class
+        );
+
+        $this->app->bind(
+            \App\Repositories\Backend\Permission\Group\PermissionGroupRepositoryContract::class,
+            \App\Repositories\Backend\Permission\Group\EloquentPermissionGroupRepository::class
+        );
+
+        $this->app->bind(
+            \App\Repositories\Backend\Permission\Dependency\PermissionDependencyRepositoryContract::class,
+            \App\Repositories\Backend\Permission\Dependency\EloquentPermissionDependencyRepository::class
+        );*/
     }
 
     /**

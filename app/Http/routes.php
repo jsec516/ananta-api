@@ -22,7 +22,6 @@ $router->group(['namespace' => 'Frontend'], function () use ($router)
  */
 $router->group(['namespace' => 'Backend'], function () use ($router)
 {
-	require(__DIR__ . "/Routes/Backend/Guest.php");
 
 
 	$router->group(['prefix' => 'admin', 'middleware' => 'auth'], function () use ($router)

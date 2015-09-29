@@ -1,5 +1,5 @@
 <?php
-get('users/deactivated', 'UserController@deactivated')->name('admin.access.users.deactivated');
+
 $router->group([
 	'prefix' => 'access',
 	'namespace' => 'Access',

@@ -136,7 +136,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        Illuminate\Html\HtmlServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -152,6 +152,11 @@ return [
         Former\FormerServiceProvider::class,
         Webpatser\Countries\CountriesServiceProvider::class,
         Laracasts\Utilities\JavaScript\JavascriptServiceProvider::class,
+
+        /**
+        * Third party providers
+        */
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
     ],
 
@@ -201,6 +206,7 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+        'HTML'      => Illuminate\Html\HtmlFacade::class,
         'Former'    => Former\Facades\Former::class,
         'Countries' => Webpatser\Countries\CountriesFacade::class,
 

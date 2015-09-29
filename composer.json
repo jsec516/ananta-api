@@ -7,9 +7,11 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
+        "laravel/socialite" : "~2.0",
         "anahkiasen/former": "4.0.*@dev",
         "webpatser/laravel-countries": "dev-master",
-        "laracasts/utilities": "~2.0"
+        "laracasts/utilities": "~2.0",
+        "illuminate/html": "^5.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
