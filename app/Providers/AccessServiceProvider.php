@@ -87,7 +87,7 @@ class AccessServiceProvider extends ServiceProvider
             \Qclinic\Repositories\Backend\Role\EloquentRoleRepository::class
         );
 
-        /*$this->app->bind(
+        $this->app->bind(
             \App\Repositories\Backend\Permission\PermissionRepositoryContract::class,
             \App\Repositories\Backend\Permission\EloquentPermissionRepository::class
         );
@@ -100,7 +100,7 @@ class AccessServiceProvider extends ServiceProvider
         $this->app->bind(
             \App\Repositories\Backend\Permission\Dependency\PermissionDependencyRepositoryContract::class,
             \App\Repositories\Backend\Permission\Dependency\EloquentPermissionDependencyRepository::class
-        );*/
+        );
     }
 
     /**
