@@ -2,7 +2,7 @@
  	<li><a href="#!">English</a></li>
  	<li><a href="#!">French</a></li>
  </ul>
- <ul id="accountDropdown" class="dropdown-content">
+ <ul id="accountDropdown" class="dropdown-content " style="overflow:visible;">
  	<li>{!! link_to('dashboard', trans('navs.dashboard')) !!}</li>
  	<li>{!! link_to('auth/password/change', trans('navs.change_password')) !!}</li>
 
@@ -12,20 +12,18 @@
 
  	<li>{!! link_to('auth/logout', trans('navs.logout')) !!}</li>
  </ul>
- <nav>
+ <nav class="blue darken-4">
  	<div class="nav-wrapper">
  		<a href="#" class="brand-logo">Qclinic</a>
  		<ul id="nav-mobile" class="right hide-on-med-and-down">
  			<!-- Dropdown Trigger -->
- 			<li><a class="dropdown-button" href="#!" data-activates="languageDropdown">Language<i class="material-icons right">arrow_drop_down</i></a></li>
+ 			<!-- <li><a class="dropdown-button" href="#!" data-activates="languageDropdown">Language<i class="material-icons right">arrow_drop_down</i></a></li> -->
  			
  			@if (Auth::guest())
  			<li>{!! link_to('auth/login', trans('navs.login')) !!}</li>
  			<li>{!! link_to('auth/register', trans('navs.register')) !!}</li>
  			@else
- 			<li>
- 				<li><a class="dropdown-button" href="#!" data-activates="accountDropdown">{{ Auth::user()->last_name }}<i class="material-icons right">arrow_drop_down</i></a></li>
- 			</li>
+ 			<li><a class="dropdown-button" href="#!" data-activates="accountDropdown">{{ Auth::user()->last_name }}<i class="material-icons right">arrow_drop_down</i></a></li>
  			@endif
  		</ul>
  	</div>
