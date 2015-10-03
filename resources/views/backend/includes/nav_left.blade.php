@@ -18,12 +18,12 @@
 			</div>
 		</li>
 		<li class="active"><a href="<?php echo 'BASE_URL'; ?>?m=dashboard"><i class="material-icons">dashboard</i> Dashboard</a></li>
-		<li><a href="<?php echo 'BASE_URL'; ?>?m=calendars"><i class="material-icons">event</i> Calendar</a></li>
-		<li><a href="<?php echo 'BASE_URL'; ?>?m=patients"><i class="material-icons">people</i> Patients</a></li>
-		<li><a href="<?php echo 'BASE_URL'; ?>?m=services"><i class="material-icons">card_giftcard</i> Services</a></li>
-		<li><a href="<?php echo 'BASE_URL'; ?>?m=practitioners"><i class="material-icons">supervisor_account</i> Practitioners</a></li>
-		<li><a href="<?php echo 'BASE_URL'; ?>?m=appointments"><i class="material-icons">schedule</i> Appointments</a></li>
-		<li><a href="<?php echo 'BASE_URL'; ?>?m=reports"><i class="material-icons">insert_chart</i> Data Reports</a></li>
+		<li><a href="{{ route('backend.calendar') }}"><i class="material-icons">event</i> Calendar</a></li>
+		<li><a href="{{ route('backend.patient') }}"><i class="material-icons">people</i> Patients</a></li>
+		<li><a href="{{ route('backend.service') }}"><i class="material-icons">card_giftcard</i> Services</a></li>
+		<li><a href="{{ route('backend.practitioner') }}"><i class="material-icons">supervisor_account</i> Practitioners</a></li>
+		<li><a href="{{ route('backend.appointment') }}"><i class="material-icons">schedule</i> Appointments</a></li>
+		<li><a href="{{ route('backend.report') }}"><i class="material-icons">insert_chart</i> Data Reports</a></li>
 		<li class="no-hover">
 			<ul class="collapsible" data-collapsible="accordion">
 				<li>

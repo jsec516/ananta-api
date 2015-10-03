@@ -14,7 +14,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         
         @yield('before-styles-end')
-        {!! HTML::style(elixir('assets/css/min_all.css')) !!}
+        {!! HTML::style(elixir('assets/css/f_min_all.css')) !!}
         @yield('after-styles-end')
 
         <!-- Icons-->
@@ -32,13 +32,13 @@
         <![endif]-->
 
         @include('frontend.includes.nav')
-        <main>
+        <main class="cyan">
             <div class="row">
                 @include('includes.partials.messages')
             </div><!-- container -->
             @yield('content')
         </main>
-        @include('includes.footer')
+        @include('frontend.includes.footer')
                 
         @yield('before-scripts-end')
         {!! HTML::script(elixir('assets/js/f_min_all.js')) !!}

@@ -12,8 +12,8 @@
 
  	<li>{!! link_to('auth/logout', trans('navs.logout')) !!}</li>
  </ul>
- <nav class="blue darken-4">
- 	<div class="nav-wrapper">
+ <nav class="white pl20">
+ 	<div class="nav-wrapper top-nav">
  		<a href="#" class="brand-logo">Qclinic</a>
  		<ul id="nav-mobile" class="right hide-on-med-and-down">
  			<!-- Dropdown Trigger -->
@@ -21,10 +21,11 @@
  			
  			@if (Auth::guest())
  			<li>{!! link_to('auth/login', trans('navs.login')) !!}</li>
- 			<li>{!! link_to('auth/register', trans('navs.register')) !!}</li>
  			@else
  			<li><a class="dropdown-button" href="#!" data-activates="accountDropdown">{{ Auth::user()->last_name }}<i class="material-icons right">arrow_drop_down</i></a></li>
  			@endif
+ 			<li>{!! link_to('contact', trans('navs.contact')) !!}</li>
+ 			<li>{!! link_to('about', trans('navs.about')) !!}</li>
  		</ul>
  	</div>
  </nav>

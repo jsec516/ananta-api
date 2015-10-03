@@ -29,4 +29,9 @@ class PasswordController extends Controller
     {
         $this->middleware('guest');
     }
+
+    public function getEmail()
+    {
+        return view('frontend.auth.password');
+    }
 }

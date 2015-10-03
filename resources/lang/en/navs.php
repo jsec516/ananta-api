@@ -22,5 +22,7 @@ return [
     'logout' => 'Logout',
     'register' => 'Register',
     'button' => 'Button',
+    'contact' => 'Contact',
+    'about' => 'About'
 
 ];

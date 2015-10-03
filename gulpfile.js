@@ -29,6 +29,12 @@ elixir(function(mix) {
       'resources/assets')
     .styles([
       'css/materialize.min.css',
+      'css/f_app.css'
+      ], 
+      'public/assets/css/f_min_all.css',
+      'resources/assets')
+    .styles([
+      'css/materialize.min.css',
       'css/fullcalendar.min.css',
       'css/scheduler.min.css',
       'css/b_app.css'
@@ -107,7 +113,7 @@ elixir(function(mix) {
       'public/assets/js/frm_all.js',
       'resources/assets')
     // Apply version control
-    .version(["public/assets/css/min_all.css", "public/assets/css/cal_all.css", "public/assets/css/tf_all.css", "public/assets/css/frm_all.css", "public/assets/js/f_min_all.js", "public/assets/js/min_all.js", "public/assets/js/ma_all.js", "public/assets/js/cal_all.js", "public/assets/js/tf_all.js", "public/assets/js/frm_all.js"])
+    .version(["public/assets/css/min_all.css", "public/assets/css/f_min_all.css", "public/assets/css/cal_all.css", "public/assets/css/tf_all.css", "public/assets/css/frm_all.css", "public/assets/js/f_min_all.js", "public/assets/js/min_all.js", "public/assets/js/ma_all.js", "public/assets/js/cal_all.js", "public/assets/js/tf_all.js", "public/assets/js/frm_all.js"])
 });
 /**
  * Copy any needed files.

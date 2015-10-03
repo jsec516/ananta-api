@@ -28,6 +28,8 @@ class AuthController extends Controller
 
     use ThrottlesLogins;
 
+    protected $redirectTo = 'admin/dashboard';
+    
     /**
      * @param AuthenticationContract $auth
      */
@@ -56,7 +58,7 @@ class AuthController extends Controller
         } else {
             //Use native auth login because do not need to check status when registering
             auth()->login($this->auth->create($request->all()));
-            return redirect()->route('frontend.dashboard');
+            return redirect()->route('backend.dashboard');
         }
     }
 
@@ -90,7 +92,7 @@ class AuthController extends Controller
             if ($throttles)
                 $this->clearLoginAttempts($request);
 
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/admin/dashboard');
         } catch (GeneralException $e) {
             // If the login attempt was unsuccessful we will increment the number of attempts
             // to login and redirect the user back to the login form. Of course, when this
@@ -131,7 +133,7 @@ class AuthController extends Controller
         //Don't know why the exception handler is not catching this
         try {
             $this->auth->confirmAccount($token);
-            return redirect()->route('frontend.dashboard')->withFlashSuccess("Your account has been successfully confirmed!");
+            return redirect()->route('backend.dashboard')->withFlashSuccess("Your account has been successfully confirmed!");
         } catch (GeneralException $e) {
             return redirect()->back()->withInput()->withFlashDanger($e->getMessage());
         }
