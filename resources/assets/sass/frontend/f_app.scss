@@ -1,66 +1,6 @@
-$blue-darken-4: #367fa9;
-$blue-darken-3: #3c8dbc;
-$blue-darken-2: #00c0ef;
-$red-lighten-4: #f56954;
-$white-darken-3: #f0f0f0;
-$cyan-darken-2: #0097a7;
-$cyan: #00bcd4;
+@import "../framework";
 
-// color selectors
-.blue.darken-4{
-	background-color: $blue-darken-4  !important;
-}
-.blue.darken-3{
-	background-color: $blue-darken-3 !important;
-}
-.blue.darken-2{
-	background-color: $blue-darken-2 !important;
-}
-.red.lighten-4{
-	background-color: $red-lighten-4 !important;
-}
-.red-text.text-lighten-4{
-	color: $red-lighten-4 !important;
-}
-.white.darken-3{
-	background-color: $white-darken-3 !important;
-}
-.white-text.darken-3-text{
-	color: $white-darken-3 !important;
-}
 // frontends
-.b{
-	font-weight: bold;
-}
-.nb{
-	font-weight: normal;
-}
-.u{
-	text-decoration: underline;
-}
-.nrp{
-	padding-right: 0px !important;
-}
-.nlp{
-	padding-left: 0px !important;
-}
-.mt30{
-	margin-top: 30px;
-}
-.pl20{
-	padding-left: 20px;
-}
-.plr20{
-	padding-left: 20px;
-	padding-right: 20px;
-}
-.xlarge{
-	font-size: 2rem;
-}
-.normal{
-	font-size: 1.5rem;
-}
-
 .btn.btn-primary {
 	background-color: $cyan;
 	border-color: $cyan-darken-2;
@@ -71,44 +11,32 @@ $cyan: #00bcd4;
 	float: none !important;
 }
 
-.top-nav ul a{
-	color: $cyan-darken-2;
-}
-.top-nav a.brand-logo {
-    padding: 0px 15px 0px 65px;
-    font-size: 24px;
-    background: url(../images/short-logo.jpg) no-repeat left center;
+.top-nav{
+	ul a{
+		color: $cyan-darken-2;
+	}
+	a.brand-logo {
+		padding: 0px 15px 0px 65px;
+		font-size: 24px;
+		background: url(../images/short-logo.jpg) no-repeat left center;
+	}
 }
 
 // other configuration
-.clearfix:before, .clearfix:after {
-	display: table;
-	content: " ";
-}
-.clearfix:after {
-	clear: both;
-}
-body {
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
-}
-
 main {
-	flex: 1 0 auto;
 	background-color: $cyan;
 	border-top: 3px solid $cyan-darken-2;
 }
 
 footer.page-footer{
-	padding-top: 0px;
 	margin-top: 0px;
 }
 
+// media queries
 @media screen and (max-width: 415px) {
-  .login-actions .btn.btn-primary{
-  	display: block;
-    width: 100%;
-    margin-bottom: 15px;
-  }
+	.login-actions .btn.btn-primary{
+		display: block;
+		width: 100%;
+		margin-bottom: 15px;
+	}
 }

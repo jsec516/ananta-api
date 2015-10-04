@@ -1,7 +1,7 @@
 @extends('backend.layouts.master')
 
 @section('styles')
-<link type="text/css" rel="stylesheet" href="{{ asset('assets/css/all.css') }}"  media="screen,projection"/>
+{!! HTML::style(elixir('assets/css/b_min_all.css')) !!}
 @endsection
 
 

@@ -1,0 +1,91 @@
+.left-sidebar-nav {
+	position: fixed;
+	width: 100px;
+	left: 180px;
+	z-index: 999;
+	height: auto;
+}
+
+#sidenav-overlay { background-color: transparent; }
+
+ul.side-nav.leftside-navigation {
+	top: 64px;
+	overflow: hidden;
+	li { 
+		line-height: 44px; 
+		a {
+			font-size: 14px;
+			font-weight: 400;
+		}
+	}
+
+	li.user-details {
+		background: url(../images/user-bg.jpg) no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		margin-bottom: 15px;
+		padding: 15px 0px 0px 15px;
+	}
+
+	.profile-btn {
+		margin: 0;
+		text-transform: capitalize;
+		padding: 0;
+		text-shadow: 1px 1px 1px #444;
+		font-size: 15px;
+	}
+}
+
+ul.side-nav.leftside-navigation li:hover,
+ul.side-nav.leftside-navigation li.active {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+ul.side-nav.leftside-navigation li.no-hover:hover{
+	background-color: transparent;
+}
+
+ul.side-nav li {
+	padding: 0;
+}
+
+.side-nav a {
+	line-height: 41px;
+	height: 42px;
+}
+
+li.li-hover:hover{
+	background: transparent !important;
+}
+
+#slide-out li a i {
+	line-height: inherit;
+	width: 2rem;
+	font-size: 1.6rem;
+	display: block;
+	float: left;
+	text-align: center;
+	margin-right: 1rem;
+}
+
+.user-details .row {
+	margin: 0;
+}
+
+#profile-dropdown li a{
+	padding: 0px 5px;
+}
+
+.user-role {
+	color: #fff;
+	margin-top: -16px;
+	font-size: 13px;
+	text-shadow: 1px 1px 1px #444;
+}
+
+.side-nav .tiny{
+	position:relative;
+	top: 2px;
+}
