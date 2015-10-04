@@ -17,13 +17,13 @@
 				</div>
 			</div>
 		</li>
-		<li class="active"><a href="<?php echo 'BASE_URL'; ?>?m=dashboard"><i class="material-icons">dashboard</i> Dashboard</a></li>
-		<li><a href="{{ route('backend.calendar') }}"><i class="material-icons">event</i> Calendar</a></li>
-		<li><a href="{{ route('backend.patient') }}"><i class="material-icons">people</i> Patients</a></li>
-		<li><a href="{{ route('backend.service') }}"><i class="material-icons">card_giftcard</i> Services</a></li>
-		<li><a href="{{ route('backend.practitioner') }}"><i class="material-icons">supervisor_account</i> Practitioners</a></li>
-		<li><a href="{{ route('backend.appointment') }}"><i class="material-icons">schedule</i> Appointments</a></li>
-		<li><a href="{{ route('backend.report') }}"><i class="material-icons">insert_chart</i> Data Reports</a></li>
+		<li class="{{ Active::route('backend.dashboard') }}"><a href="{{ route('backend.dashboard') }}"><i class="material-icons">dashboard</i> Dashboard</a></li>
+		<li class='{{ Active::route("backend.calendar") }}'><a href="{{ route('backend.calendar') }}"><i class="material-icons">event</i> Calendar</a></li>
+		<li class="{{ Active::route('backend.patient') }}"><a href="{{ route('backend.patient') }}"><i class="material-icons">people</i> Patients</a></li>
+		<li class="{{ Active::route('backend.service') }}"><a href="{{ route('backend.service') }}"><i class="material-icons">card_giftcard</i> Services</a></li>
+		<li class="{{ Active::route('backend.practitioner') }}"><a href="{{ route('backend.practitioner') }}"><i class="material-icons">supervisor_account</i> Practitioners</a></li>
+		<li class="{{ Active::route('backend.appointment') }}"><a href="{{ route('backend.appointment') }}"><i class="material-icons">schedule</i> Appointments</a></li>
+		<li class="{{ Active::route('backend.report') }}"><a href="{{ route('backend.report') }}"><i class="material-icons">insert_chart</i> Data Reports</a></li>
 		<li class="no-hover">
 			<ul class="collapsible" data-collapsible="accordion">
 				<li>
@@ -32,9 +32,9 @@
 					</a>
 					<div class="collapsible-body" style="display: none;">
 						<ul>
-							<li><a href="<?php echo 'BASE_URL'; ?>?m=reminders&a=email"><i class="material-icons">email</i> Email Reminder</a>
+							<li><a href="{{ route('backend.report', ['type' => 'email']) }}"><i class="material-icons">email</i> Email Reminder</a>
 							</li>                                        
-							<li><a href="<?php echo 'BASE_URL'; ?>?m=reminders&a=call"><i class="material-icons">call</i> Call Reminder</a>
+							<li><a href="{{ route('backend.report', ['type' => 'call']) }}"><i class="material-icons">call</i> Call Reminder</a>
 							</li>
 						</ul>
 					</div>
@@ -45,13 +45,13 @@
 					</a>
 					<div class="collapsible-body" style="display: none;">
 						<ul>
-							<li><a href="<?php echo 'BASE_URL'; ?>?m=settings&a=schedule"><i class="material-icons">alarm</i> Schedule</a>
+							<li><a href="{{ route('backend.setting.schedule') }}"><i class="material-icons">alarm</i> Schedule</a>
 							</li>                                        
-							<li><a href="<?php echo 'BASE_URL'; ?>?m=users"><i class="material-icons">supervisor_account</i> Users</a>
+							<li><a href="{{ route('backend.setting.user') }}"><i class="material-icons">supervisor_account</i> Users</a>
 							</li>
-							<li><a href="<?php echo 'BASE_URL'; ?>?m=myaccount"><i class="material-icons">info</i> Account Info</a>
+							<li><a href="{{ route('backend.setting.account') }}"><i class="material-icons">info</i> Account Info</a>
 							</li>
-							<li><a href="<?php echo 'BASE_URL'; ?>?m=auth&a=logout"><i class="material-icons">power_settings_new</i> Logout</a>
+							<li><a href="{{ route('logout') }}"><i class="material-icons">power_settings_new</i> Logout</a>
 							</li>
 						</ul>
 					</div>

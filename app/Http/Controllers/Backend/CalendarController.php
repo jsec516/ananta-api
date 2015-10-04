@@ -5,10 +5,10 @@ namespace Qclinic\Http\Controllers\Backend;
 use Qclinic\Http\Controllers\Controller;
 
 /**
- * Class DashboardController
+ * Class CalendarController
  * @package App\Http\Controllers\Backend
  */
-class CalendarsController extends Controller {
+class CalendarController extends Controller {
 
 	/**
 	 * @return \Illuminate\View\View

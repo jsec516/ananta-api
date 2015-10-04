@@ -151,7 +151,8 @@ return [
         */
         Former\FormerServiceProvider::class,
         Webpatser\Countries\CountriesServiceProvider::class,
-        Laracasts\Utilities\JavaScript\JavascriptServiceProvider::class,
+        Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
+        HieuLe\Active\ActiveServiceProvider::class,
 
         /**
         * Third party providers
@@ -209,7 +210,7 @@ return [
         'HTML'      => Illuminate\Html\HtmlFacade::class,
         'Former'    => Former\Facades\Former::class,
         'Countries' => Webpatser\Countries\CountriesFacade::class,
-
+        'Active'    => HieuLe\Active\Facades\Active::class,
     ],
 
 ];

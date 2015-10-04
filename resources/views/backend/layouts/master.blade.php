@@ -10,9 +10,7 @@
         <meta name="author" content="@yield('author', 'Jahidul Islam')">
         @yield('meta')
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        @yield('before-styles-end')
-        {!! HTML::style(elixir('assets/css/b_min_all.css')) !!}
-        @yield('after-styles-end')
+        @yield('styles')
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,8 +36,6 @@
           @include('backend.includes.nav_right')
         </main>
         @include('backend.includes.footer')
-        @yield('before-scripts-end')
-        {!! HTML::script(elixir('assets/js/b_min_all.js')) !!}
-        @yield('after-scripts-end')
+        @yield('scripts')
     </body>
 </html>

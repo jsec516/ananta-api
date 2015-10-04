@@ -3,7 +3,8 @@
 /**
  * Frontend Controllers
  */
-get('/', 'FrontendController@index')->name('home');
+
+
 get('macros', 'FrontendController@macros');
 
 /**

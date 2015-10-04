@@ -1,4 +1,13 @@
 @extends('backend.layouts.master')
+
+@section('styles')
+   {!! HTML::style(elixir('assets/css/b_min_all.css')) !!}
+@endsection
+
+@section('scripts')
+	{!! HTML::script(elixir('assets/js/b_min_all.js')) !!}
+@endsection
+
 @section('content')
 <div class="row mt30">
 	<div class="col s12 m12 l6">
