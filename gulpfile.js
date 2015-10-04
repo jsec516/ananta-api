@@ -64,7 +64,7 @@ elixir(function(mix) {
       'js/perfect-scrollbar.jquery.min.js',
       'js/backend/app.js'
       ],
-      'public/assets/js/min_all.js',
+      'public/assets/js/b_min_all.js',
       'resources/assets')
     .scripts([
       'js/jquery.min.js',
@@ -81,7 +81,7 @@ elixir(function(mix) {
       'js/perfect-scrollbar.jquery.min.js',
       'js/backend/app.js'
       ],
-      'public/assets/js/ma_all.js',
+      'public/assets/js/b_ma_all.js',
       'resources/assets')
     .scripts([
       'js/jquery.min.js',
@@ -92,7 +92,7 @@ elixir(function(mix) {
       'js/perfect-scrollbar.jquery.min.js',
       'js/backend/app.js'
       ],
-      'public/assets/js/cal_all.js',
+      'public/assets/js/b_cal_all.js',
       'resources/assets')
     mix.scripts([
       'js/jquery.min.js',
@@ -102,7 +102,7 @@ elixir(function(mix) {
       'js/perfect-scrollbar.jquery.min.js',
       'js/backend/app.js'
       ],
-      'public/assets/js/tf_all.js',
+      'public/assets/js/b_tf_all.js',
       'resources/assets')
     mix.scripts([
       'js/jquery.min.js',
@@ -110,10 +110,21 @@ elixir(function(mix) {
       'js/perfect-scrollbar.jquery.min.js',
       'js/backend/app.js'
       ],
-      'public/assets/js/frm_all.js',
+      'public/assets/js/b_frm_all.js',
       'resources/assets')
     // Apply version control
-    .version(["public/assets/css/b_min_all.css", "public/assets/css/f_min_all.css", "public/assets/css/b_cal_all.css", "public/assets/css/b_tf_all.css", "public/assets/css/b_frm_all.css", "public/assets/js/f_min_all.js", "public/assets/js/min_all.js", "public/assets/js/ma_all.js", "public/assets/js/cal_all.js", "public/assets/js/tf_all.js", "public/assets/js/frm_all.js"])
+    .version([
+      "public/assets/css/b_min_all.css", 
+      "public/assets/css/f_min_all.css", 
+      "public/assets/css/b_cal_all.css", 
+      "public/assets/css/b_tf_all.css", 
+      "public/assets/css/b_frm_all.css", 
+      "public/assets/js/f_min_all.js", 
+      "public/assets/js/b_min_all.js", 
+      "public/assets/js/b_ma_all.js", 
+      "public/assets/js/b_cal_all.js", 
+      "public/assets/js/b_tf_all.js", 
+      "public/assets/js/b_frm_all.js"])
 });
 /**
  * Copy any needed files.
