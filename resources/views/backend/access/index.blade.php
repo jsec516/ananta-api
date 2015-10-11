@@ -25,7 +25,8 @@
 @section('content')
     @include('backend.access.includes.partials.header-buttons')
     {!! Datatable::table()
-    ->addColumn('id','Name')       // these are the column headings to be shown
+    // ->setOptions(array('sDom' => '<"row"<"col l6"lT><"col l6"f>>tr<"row"<"col l6"i><"col l6"p>>'))
+    ->addColumn('Name', 'Email', 'Last Login', 'Actions')       // these are the column headings to be shown
     ->setUrl(route('api.users'))   // this is the route where data will be retrieved
     ->render() !!}
 @stop

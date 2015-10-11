@@ -320,10 +320,17 @@ class EloquentUserRepository implements UserContract {
 	 **/
 	public function handleDataTable()
 	{
-		return \Datatable::collection(User::all(array('id','email')))
-        ->showColumns('id', 'email')
-        ->searchColumns('email')
-        ->orderColumns('id','email')
-        ->make();
+		return \Datatable::collection(User::all(array('id','email', 'first_name', 'last_name', 'last_login')))
+		->showColumns('email', 'name', 'last_login', 'actions')
+		->addColumn('actions', function($model){
+			return '<a href="'.url('/admin/access/users/edit/'.$model->id).'"><i class="cyan-text material-icons table-action">mode_edit</i></a> 
+					<a href=""><i class="cyan-text material-icons table-action">remove_circle</i></a> <a href=""><i class="cyan-text material-icons table-action">perm_data_setting</i></a>';
+		})
+		->addColumn('name', function($model){
+			return $model->first_name.' '.$model->last_name;
+		})
+		->searchColumns('email')
+		->orderColumns('id','email')
+		->make();
 	}
 }

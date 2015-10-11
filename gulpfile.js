@@ -44,7 +44,6 @@ elixir(function(mix) {
     .styles([
       'css/materialize.min.css',
       'css/datatable.css',
-      'css/responsive.dataTables.min.css',
       'css/select2-materialized.css',
       'css/b_app.css'
       ],
