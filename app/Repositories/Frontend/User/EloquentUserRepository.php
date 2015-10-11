@@ -2,7 +2,7 @@
 
 namespace Qclinic\Repositories\Frontend\User;
 
-use Qclinic\Models\User;
+use Qclinic\Models\Access\User\User;
 use Qclinic\Models\Access\User\UserProvider;
 use Qclinic\Exceptions\GeneralException;
 use Illuminate\Support\Facades\Mail;

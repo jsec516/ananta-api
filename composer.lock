@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9ff44f8f18823c709daef30ee22373e8",
-    "content-hash": "cd4fcfafef277fed6794ce292ac8499b",
+    "hash": "6e7e52b1de546920c3385058755705e8",
+    "content-hash": "ce98a4cdf8e2b38ba8cdc57c11b4479e",
     "packages": [
         {
             "name": "anahkiasen/former",
@@ -104,6 +104,59 @@
             ],
             "description": "A set of classes to create and manipulate HTML objects abstractions",
             "time": "2015-03-04 17:12:08"
+        },
+        {
+            "name": "chumper/datatable",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Chumper/Datatable.git",
+                "reference": "c7f6c41ff04987157b5629a2a205781ddc37120f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Chumper/Datatable/zipball/c7f6c41ff04987157b5629a2a205781ddc37120f",
+                "reference": "c7f6c41ff04987157b5629a2a205781ddc37120f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "~5.0",
+                "illuminate/support": "~5.0",
+                "illuminate/view": "~5.0",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master",
+                "orchestra/testbench": "3.1.*",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Chumper\\Datatable": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nils Plaschke",
+                    "email": "github@nilsplaschke.de",
+                    "homepage": "http://nilsplaschke.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This is a laravel 4 package for the server and client side of datatablaes at http://datatables.net/",
+            "homepage": "http://github.com/Chumper/datatable",
+            "keywords": [
+                "ajax",
+                "datatables",
+                "jquery",
+                "laravel"
+            ],
+            "time": "2015-10-07 02:17:36"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -3646,7 +3699,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "anahkiasen/former": 20,
-        "webpatser/laravel-countries": 20
+        "webpatser/laravel-countries": 20,
+        "chumper/datatable": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

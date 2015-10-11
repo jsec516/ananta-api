@@ -47,7 +47,7 @@
 						<ul>
 							<li><a href="{{ route('backend.setting.schedule') }}"><i class="material-icons">alarm</i> Schedule</a>
 							</li>                                        
-							<li><a href="{{ route('backend.setting.user') }}"><i class="material-icons">supervisor_account</i> Users</a>
+							<li><a href="{{ url('/admin/access/users') }}"><i class="material-icons">supervisor_account</i> Users</a>
 							</li>
 							<li><a href="{{ route('backend.setting.account') }}"><i class="material-icons">info</i> Account Info</a>
 							</li>

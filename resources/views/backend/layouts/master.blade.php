@@ -11,6 +11,7 @@
         @yield('meta')
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         @yield('styles')
+        @yield('scripts')
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,19 +24,23 @@
         @include('backend.includes.nav_top')
         <main>
           @include('backend.includes.nav_left')
-          <section class="row content-header">
-            @yield('page-header')
+          <section class="content-header-wrapper grey lighten-3">
+            <div class="container">
+              <div class="row">
+              @yield('page-header')
               <ol class="breadcrumb">
                 @yield('breadcrumbs')
               </ol>
+            </div>
+            </div>
           </section>
-          <section class="content">
+          <section class="container content">
             @include('includes.partials.messages')
             @yield('content')
           </section>
           @include('backend.includes.nav_right')
         </main>
         @include('backend.includes.footer')
-        @yield('scripts')
+        
     </body>
 </html>

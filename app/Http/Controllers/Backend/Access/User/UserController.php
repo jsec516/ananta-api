@@ -205,4 +205,13 @@ class UserController extends Controller {
 		$auth->resendConfirmationEmail($user_id);
 		return redirect()->back()->withFlashSuccess(trans("alerts.users.confirmation_email"));
 	}
+
+	/**
+	 * @param void
+	 * @return collection
+	 */
+	public function getDataTable()
+	{
+		return $this->users->handleDataTable();
+	}
 }

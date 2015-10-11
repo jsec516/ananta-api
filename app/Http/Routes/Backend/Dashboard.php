@@ -11,5 +11,4 @@ get('services', 'ServiceController@index')->name('backend.service');
 get('reports', 'ReportController@index')->name('backend.report');
 get('reminders/{type}', 'ReminderController@getIndex')->name('backend.reminder');
 get('settings/schedule', 'SettingController@getSchedule')->name('backend.setting.schedule');
-get('settings/user', 'UserController@index')->name('backend.setting.user');
 get('settings/account', 'SettingController@getAccount')->name('backend.setting.account');

@@ -2,7 +2,7 @@
 
 namespace Qclinic\Repositories\Frontend\Auth;
 
-use Qclinic\Models\User;
+use Qclinic\Models\Access\User\User;
 use Qclinic\Exceptions\GeneralException;
 use Illuminate\Contracts\Auth\Guard;
 use Qclinic\Events\Frontend\Auth\UserLoggedIn;

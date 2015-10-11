@@ -1,6 +1,6 @@
 <?php
 
-namespace Qclinic\Models;
+namespace Qclinic\Models\Access\User;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Support\Facades\Hash;

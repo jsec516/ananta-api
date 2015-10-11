@@ -88,18 +88,18 @@ class AccessServiceProvider extends ServiceProvider
         );
 
         $this->app->bind(
-            \App\Repositories\Backend\Permission\PermissionRepositoryContract::class,
-            \App\Repositories\Backend\Permission\EloquentPermissionRepository::class
+            \Qclinic\Repositories\Backend\Permission\PermissionRepositoryContract::class,
+            \Qclinic\Repositories\Backend\Permission\EloquentPermissionRepository::class
         );
 
         $this->app->bind(
-            \App\Repositories\Backend\Permission\Group\PermissionGroupRepositoryContract::class,
-            \App\Repositories\Backend\Permission\Group\EloquentPermissionGroupRepository::class
+            \Qclinic\Repositories\Backend\Permission\Group\PermissionGroupRepositoryContract::class,
+            \Qclinic\Repositories\Backend\Permission\Group\EloquentPermissionGroupRepository::class
         );
 
         $this->app->bind(
-            \App\Repositories\Backend\Permission\Dependency\PermissionDependencyRepositoryContract::class,
-            \App\Repositories\Backend\Permission\Dependency\EloquentPermissionDependencyRepository::class
+            \Qclinic\Repositories\Backend\Permission\Dependency\PermissionDependencyRepositoryContract::class,
+            \Qclinic\Repositories\Backend\Permission\Dependency\EloquentPermissionDependencyRepository::class
         );
     }
 

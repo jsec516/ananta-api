@@ -2,11 +2,12 @@
 
 namespace Qclinic\Repositories\Backend\User;
 
-use Qclinic\Models\User;
+use Qclinic\Models\Access\User\User;
 use Qclinic\Exceptions\GeneralException;
 use Qclinic\Repositories\Backend\Role\RoleRepositoryContract;
 use Qclinic\Repositories\Frontend\Auth\AuthenticationContract;
 use Qclinic\Exceptions\Backend\Access\User\UserNeedsRolesException;
+// use Chumper\Datatable\Facades\DatatableFacade;
 
 /**
  * Class EloquentUserRepository
@@ -310,5 +311,19 @@ class EloquentUserRepository implements UserContract {
 		$user->confirmation_code = md5(uniqid(mt_rand(), true));
 		$user->confirmed = isset($input['confirmed']) ? 1 : 0;
 		return $user;
+	}
+
+	/**
+	 * @param void
+	 * @return datatable collection
+	 * @author 
+	 **/
+	public function handleDataTable()
+	{
+		return \Datatable::collection(User::all(array('id','email')))
+        ->showColumns('id', 'email')
+        ->searchColumns('email')
+        ->orderColumns('id','email')
+        ->make();
 	}
 }

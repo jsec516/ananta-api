@@ -1,6 +1,58 @@
 @import "../framework";
 @import "../select2";
 
+.container{
+	padding: 0 0.5rem;
+	margin: 0 auto;
+	max-width: 100% !important;
+	width: 98%;
+}
+.container.content{
+	margin-top: 30px;
+}
+.container > .row{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.content-header-wrapper{
+	width: 100%;
+	position: relative;
+}
+// breadcrumbs
+.breadcrumb {
+	padding: 0px;
+	margin: 15px 0px;
+	list-style: none;
+}
+.breadcrumbs-title {
+	font-size: 1.5rem;
+	line-height: 1.804rem;
+	padding: 18px 0px 0px 0px;
+	margin: 0px;
+}
+
+.breadcrumbs-title small{
+	color: $dark_grey;
+	font-size: 55%;
+}
+
+.breadcrumb > li {
+	display: inline-block;
+}
+.breadcrumb a {
+	color: #00bcd4;
+}
+.breadcrumb .active {
+	font-weight: normal;
+	color: #999;
+}
+.breadcrumb > li + li:before {
+	padding: 0 5px;
+	color: #ccc;
+	content: "/\00a0";
+}
+// btgroups
+
 // buttons
 .btn.btn-primary {
 	background-color: #3c8dbc;

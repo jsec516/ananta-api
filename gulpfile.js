@@ -96,6 +96,7 @@ elixir(function(mix) {
       'resources/assets')
     mix.scripts([
       'js/jquery.min.js',
+      'js/materialize.min.js',
       'js/jquery.dataTables.min.js',
       'js/dataTables.responsive.min.js',
       'js/select2.min.js',

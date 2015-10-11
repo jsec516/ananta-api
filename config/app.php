@@ -153,6 +153,7 @@ return [
         Webpatser\Countries\CountriesServiceProvider::class,
         Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
         HieuLe\Active\ActiveServiceProvider::class,
+        Chumper\Datatable\DatatableServiceProvider::class,
 
         /**
         * Third party providers
@@ -211,6 +212,7 @@ return [
         'Former'    => Former\Facades\Former::class,
         'Countries' => Webpatser\Countries\CountriesFacade::class,
         'Active'    => HieuLe\Active\Facades\Active::class,
+        'Datatable' => Chumper\Datatable\Facades\DatatableFacade::class,
     ],
 
 ];
