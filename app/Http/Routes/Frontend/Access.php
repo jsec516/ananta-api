@@ -3,15 +3,14 @@
 /**
  * Frontend Access Controllers
  */
+
 $router->group(['middleware' => 'guest'], function () use ($router)
-	{
-		get('/', 'FrontendController@index')->name('home');
-	});
+{
+	get('/', 'FrontendController@index')->name('home');
+});
 
 $router->group(['namespace' => 'Auth'], function () use ($router)
 {
-	
-
 	/**
 	 * These routes require the user to be logged in
 	 */

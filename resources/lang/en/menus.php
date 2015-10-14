@@ -64,4 +64,26 @@ return [
             'sv' => 'Swedish',
         ],
     ],
+
+    /*
+     * following contents directly involved with admin menu
+     */
+
+    'profile' => 'Profile',
+    'settings' => 'Settings',
+    'logout' => 'Logout',
+    'calendar' => 'Calendar',
+    'patient' => 'Patients',
+    'service' => 'Services',
+    'practitioner' => 'Practitioners',
+    'appointment' => 'Appointments',
+    'report' => 'Data Reports',
+    'reminder' => 'Reminders',
+    'email_reminder' => 'Email Reminders',
+    'call_reminder' => 'Call Reminders',
+    'system' => 'Systems',
+    'schedule' => 'Schedule',
+    'user' => 'Users',
+    'account_info' => 'Account Info',
+    
 ];

@@ -4,14 +4,15 @@ $router->group([
 	'prefix' => 'access',
 	'namespace' => 'Access',
 	'middleware' => 'access.routeNeedsPermission:view-access-management'
-], function() use ($router)
-{
+	], function() use ($router)
+	{
+		
 	/**
 	 * User Management
 	 */
 	$router->group(['namespace' => 'User'], function() use ($router) {
 		resource('users', 'UserController', ['except' => ['show']]);
-    	get('api/users', array('as'=>'api.users', 'uses'=>'UserController@getDatatable'));
+		get('api/users', array('as'=>'api.users', 'uses'=>'UserController@getDatatable'));
 		get('users/deactivated', 'UserController@deactivated')->name('admin.access.users.deactivated');
 		get('users/banned', 'UserController@banned')->name('admin.access.users.banned');
 		get('users/deleted', 'UserController@deleted')->name('admin.access.users.deleted');

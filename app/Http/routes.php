@@ -22,11 +22,8 @@ $router->group(['namespace' => 'Frontend'], function () use ($router)
  */
 $router->group(['namespace' => 'Backend'], function () use ($router)
 {
-
-
 	$router->group(['prefix' => 'admin', 'middleware' => 'auth'], function () use ($router)
 	{
-
 		/**
 		 * These routes need view-backend permission (good if you want to allow more than one group in the backend, then limit the backend features by different roles or permissions)
 		 *
