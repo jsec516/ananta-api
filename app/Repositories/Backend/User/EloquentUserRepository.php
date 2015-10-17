@@ -324,7 +324,7 @@ class EloquentUserRepository implements UserContract {
 		->showColumns('name', 'email', 'last_login', 'actions')
 		->addColumn('actions', function($model){
 			return '<a href="'.url('/admin/access/users/edit/'.$model->id).'"><i class="cyan-text text-darken-4 material-icons table-action">mode_edit</i></a> 
-					<a href=""><i class="red-text text-darken-2 material-icons table-action">remove_circle</i></a> <a href=""><i class="red-text text-darken-4 material-icons table-action">perm_data_setting</i></a>';
+					<a href=""><i class="red-text text-darken-2 material-icons table-action">remove_circle</i></a>';
 		})
 		->addColumn('name', function($model){
 			return $model->first_name.' '.$model->last_name;

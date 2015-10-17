@@ -21,5 +21,8 @@ return [
 	'appointment' => 'Appointments',
 	'copyright' => "2015 All right reserved by qclinic.com",
 	'copyright_dev' => 'Design and Developed by',
-	
+	'address_info' => 'Address Information',
+	'contact_info' => 'Contact Information',
+	'password_info' => 'Password Information',
+	'basic_info' => 'Basic Information'
 ];

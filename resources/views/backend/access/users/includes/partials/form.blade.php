@@ -18,31 +18,23 @@
             <label for="email" class="active">{!! trans('forms.email') !!}</label>
         </div>
         <div class="input-field col s6">
-            {!! Former::select('user.practitioner')->options(array(
-            1  => 'Max',
-            3  => 'Clémence',
-            12 => 'Jean Valjean'
+            {!! Former::select('role')->options(array(
+            1  => 'Admin',
+            2  => 'Manager',
+            3 => 'Receptionist'
             )) !!}
-            <label for="primary_practitioner" class="active">{!! trans('forms.primary_prac') !!}</label>
+            <label for="primary_practitioner" class="active">{!! trans('forms.role') !!}</label>
         </div>
     </div>
     <h2 class="header2">{!! trans('copy.password_info') !!}</h2>
     <div class="row">
         <div class="input-field col s6">
-            {!! Former::select('contact_with')->options(array(
-            1  => 'Email',
-            2  => 'Phone',
-            3 => 'Both'
-            )) !!}
-            <label for="contact_with" class="active">{!! trans('forms.contact_with') !!}</label>
+            {!! Former::password('password')->placeholder(trans('forms.password')) !!}
+            <label for="password" class="active">{!! trans('forms.password') !!}</label>
         </div>
         <div class="input-field col s6">
-            {!! Former::select('primary_contact')->options(array(
-            1  => 'Phone (Home)',
-            2  => 'Phone (Cell)',
-            3 => 'Phone (work)'
-            )) !!}
-            <label for="primary_contact" class="active">{!! trans('forms.primary_contact') !!}</label>
+            {!! Former::password('password_confirmation')->placeholder(trans('forms.c_password')) !!}
+            <label for="password_confirmation" class="active">{!! trans('forms.c_password') !!}</label>
         </div>
     </div>
     <h2 class="header2">{!! trans('copy.contact_info') !!}</h2>

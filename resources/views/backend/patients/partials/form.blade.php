@@ -29,20 +29,12 @@
     <h2 class="header2">{!! trans('copy.password_info') !!}</h2>
     <div class="row">
         <div class="input-field col s6">
-            {!! Former::select('contact_with')->options(array(
-            1  => 'Email',
-            2  => 'Phone',
-            3 => 'Both'
-            )) !!}
-            <label for="contact_with" class="active">{!! trans('forms.contact_with') !!}</label>
+            {!! Former::password('password') !!}
+            <label for="password" class="active">{!! trans('forms.password') !!}</label>
         </div>
         <div class="input-field col s6">
-            {!! Former::select('primary_contact')->options(array(
-            1  => 'Phone (Home)',
-            2  => 'Phone (Cell)',
-            3 => 'Phone (work)'
-            )) !!}
-            <label for="primary_contact" class="active">{!! trans('forms.primary_contact') !!}</label>
+            {!! Former::password('password_confirmation') !!}
+            <label for="password_confirmation" class="active">{!! trans('forms.password_confirmation') !!}</label>
         </div>
     </div>
     <h2 class="header2">{!! trans('copy.contact_info') !!}</h2>

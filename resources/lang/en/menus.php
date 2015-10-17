@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'active_users' => 'Active Users',
+    'active_users' => 'All Users',
     'all_patients' => 'All Patients',
     'banned_users' => 'Banned Users',
     'create_permission' => 'Create Permission',

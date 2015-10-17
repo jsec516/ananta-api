@@ -54,7 +54,7 @@ class UserController extends Controller {
 	 * @return mixed
 	 */
 	public function index() {
-		return view('backend.access.index')
+		return view('backend.access.users.index')
 			->withUsers($this->users->getUsersPaginated(config('access.users.default_per_page'), 1));
 	}
 

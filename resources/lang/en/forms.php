@@ -19,15 +19,17 @@ return [
     'email' => 'Email',
     'primary_prac' => 'Primary Practitioner',
     'password' => 'Password',
-    're_password' => 'Retype Password',
+    'c_password' => 'Confirm Password',
     'contact_with' => 'Contact With',
     'primary_contact' => 'Primary Contact',
-    'phone' => 'Phone',
-    'cell' => 'Cell',
-    'work' => 'Work',
+    'phone_home' => 'Phone (Home)',
+    'phone_cell' => 'Phone (Cell)',
+    'phone_work' => 'Phone (Work)',
     'street' => 'Street',
     'province' => 'Province',
     'city' => 'City',
     'postal_code' => 'Postal Code',
-    'additional_info' => 'Additional Information'
+    'address1' => 'Address1',
+    'address2' => 'Address2',
+    'role' => 'Role'
 ];
