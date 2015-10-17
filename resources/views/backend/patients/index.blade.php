@@ -1,3 +1,28 @@
+@extends ('backend.layouts.master')
+
+@section ('title', trans('menus.user_management'))
+
+@section('styles')
+   {!! HTML::style(elixir('assets/css/b_tf_all.css')) !!}
+@endsection
+
+@section('scripts')
+    {!! HTML::script(elixir('assets/js/b_tf_all.js')) !!}
+@endsection
+
+@section('page-header')
+    <h5 class="breadcrumbs-title">
+        {{ trans('menus.patient_management') }}
+        <small>{{ trans('menus.all_patients') }}</small>
+    </h5>
+@endsection
+
+@section ('breadcrumbs')
+    <li><a href="{!!route('backend.dashboard')!!}"><i class="fa fa-dashboard"></i> {{ trans('menus.dashboard') }}</a></li>
+    <li class="active">{{ trans('menus.patient_management') }}</li>
+@stop
+
+@section('content')
 <div class="row mt30">
     <div class="col s12">
         <ul class="tab-option clearfix">
@@ -124,3 +149,4 @@
 </div>
 <!-- modal complete -->
 </div>
+@stop

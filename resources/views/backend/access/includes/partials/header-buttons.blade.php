@@ -1,6 +1,5 @@
-<div class="right" style="margin-bottom:10px">
-  <a class='dropdown-button btn' href='#' data-activates='userDropDown'><i class="material-icons right">keyboard_arrow_down</i> {{ trans('menus.header_buttons.users.button') }}</a>
-  <a class='dropdown-button btn' href='#' data-activates='roleDropDown'><i class="material-icons right">keyboard_arrow_down</i> {{ trans('menus.header_buttons.roles.button') }}</a>
+  <a class='dropdown-button waves-effect waves-light btn btn-primary' href='#' data-activates='userDropDown'><i class="material-icons right">keyboard_arrow_down</i> {{ trans('menus.header_buttons.users.button') }}</a>
+  <a class='dropdown-button waves-effect waves-light btn btn-primary' href='#' data-activates='roleDropDown'><i class="material-icons right">keyboard_arrow_down</i> {{ trans('menus.header_buttons.roles.button') }}</a>
   <!-- <a class='dropdown-button btn' href='#' data-activates='permDropDown'><i class="material-icons right">keyboard_arrow_down</i> {{ trans('menus.header_buttons.permissions.button') }}</a> -->
   <ul id="userDropDown" class="dropdown-content" role="menu">
     <li><a href="{{route('admin.access.users.index')}}">{{ trans('menus.header_buttons.users.all') }}</a></li>
@@ -38,7 +37,3 @@
     <li><a href="{{route('admin.access.roles.permissions.index')}}">{{ trans('menus.header_buttons.permissions.all') }}</a></li>
     <li><a href="{{route('admin.access.roles.permissions.index')}}">{{ trans('menus.header_buttons.permissions.groups.all') }}</a></li>
   </ul>
-
-</div>
-
-<div class="clearfix"></div>

@@ -8,13 +8,13 @@ use Qclinic\Http\Controllers\Controller;
  * Class DashboardController
  * @package App\Http\Controllers\Backend
  */
-class PatientsController extends Controller {
+class PatientController extends Controller {
 
 	/**
 	 * @return \Illuminate\View\View
 	 */
 	public function index()
 	{
-		return view('backend.pateints.index');
+		return view('backend.patients.index');
 	}
 }

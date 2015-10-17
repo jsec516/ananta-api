@@ -14,6 +14,7 @@ return [
     */
 
     'active_users' => 'Active Users',
+    'all_patients' => 'All Patients',
     'banned_users' => 'Banned Users',
     'create_permission' => 'Create Permission',
     'create_permission_group' => 'Create Group',
@@ -54,6 +55,7 @@ return [
     'permission_management' => 'Permission Management',
     'role_management' => 'Role Management',
     'user_management' => 'User Management',
+    'patient_management' => 'Patient Management',
     'access_management' => 'Access Management',
     'language-picker' => [
         'language' => 'Language',
