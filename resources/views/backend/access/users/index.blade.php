@@ -35,9 +35,6 @@
                 <div class="col s12">
                     <button onclick="modJs.renderForm('User');return false;" class="waves-effect waves-light btn btn-primary">Add New <i class="material-icons right">add</i></button>
                     &nbsp;&nbsp;
-                    <button onclick="modJs.showFilters();return false;" class="waves-effect waves-light btn btn-primary">Filter <i class="material-icons right">local_bar</i></button>
-                    &nbsp;&nbsp;
-                    <button id="User_resetFilters" onclick="modJs.resetFilters();return false;" class="waves-effect waves-light btn btn-default" style="display:none;">Reset Filters <i class="material-icons right">close</i></button>
                 </div>
             </div>
             <div class="box-body responsive-table">

@@ -22,6 +22,8 @@ $router->group([
 		 * Specific User
 		 */
 		$router->group(['prefix' => 'user/{id}', 'where' => ['id' => '[0-9]+']], function () {
+			get('edit', 'UserController@edit')->name('admin.access.user.edit');
+			get('delete', 'UserController@destroy')->name('admin.access.user.delete');
 			get('delete', 'UserController@delete')->name('admin.access.user.delete-permanently');
 			get('restore', 'UserController@restore')->name('admin.access.user.restore');
 			get('mark/{status}', 'UserController@mark')->name('admin.access.user.mark')->where(['status' => '[0,1,2]']);

@@ -96,7 +96,7 @@
                 <i class="material-icons left">save</i>
             </button>
 
-            <button class="btn btn-default waves-effect waves-light right" type="button" name="action">Cancel
+            <button class="btn btn-default waves-effect waves-light right" type="button" name="action" onclick="modJs.cancelForm('User');return false;">Cancel
                 <i class="material-icons left">close</i>
             </button>
         </div>

@@ -422,7 +422,9 @@ ul.side-nav .collapsible-header {
 h2.header2 {
   font-size: 1.1rem;
   font-weight: 400;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px; }
 
 .dataTables_wrapper .dataTables_paginate {
   float: right; }

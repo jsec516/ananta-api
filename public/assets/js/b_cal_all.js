@@ -44,6 +44,10 @@ var modJs = {renderForm : function(elem){
 },
 showFilters : function(){
 	$("#modal1").openModal();
+},
+cancelForm: function(elem){
+    $("#"+elem+"Form").removeClass('hide');  
+    $("#"+elem).show();
 } };
 (function($){
 	$(document).ready(function(){
