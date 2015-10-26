@@ -140,7 +140,6 @@ return [
         /*
          * Application Service Providers...
          */
-        Qclinic\Providers\AccessServiceProvider::class,
         Qclinic\Providers\AppServiceProvider::class,
         //Qclinic\Providers\AuthServiceProvider::class,
         Qclinic\Providers\EventServiceProvider::class,
