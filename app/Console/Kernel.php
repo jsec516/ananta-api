@@ -14,6 +14,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \Qclinic\Console\Commands\Inspire::class,
+        \Qclinic\Console\Commands\CreateRandomData::class,
+        \Qclinic\Console\Commands\SetupDummyData::class,
     ];
 
     /**

@@ -158,6 +158,7 @@ return [
         * Third party providers
         */
         Laravel\Socialite\SocialiteServiceProvider::class,
+        McCool\LaravelAutoPresenter\AutoPresenterServiceProvider::class,
 
     ],
 

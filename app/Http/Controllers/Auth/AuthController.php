@@ -1,6 +1,6 @@
 <?php
 
-namespace Qclinic\Http\Controllers\Backend\Auth;
+namespace Qclinic\Http\Controllers\Auth;
 
 use Qclinic\User;
 use Validator;
@@ -23,7 +23,7 @@ class AuthController extends Controller
 
     protected $redirectTo = '/admin/dashboard';
     protected $redirectPath = '/admin/dashboard';
-    protected $loginPath = '/admin/login';
+    protected $loginPath = '/login';
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
@@ -45,11 +45,11 @@ class AuthController extends Controller
      */
     public function getLogin()
     {
-        if (view()->exists('backend.auth.authenticate')) {
-            return view('backend.auth.authenticate');
+        if (view()->exists('auth.authenticate')) {
+            return view('auth.authenticate');
         }
 
-        return view('backend.auth.login');
+        return view('auth.login');
     }
 
     /**

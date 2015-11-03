@@ -90,4 +90,12 @@ return array(
 		 */
 		'role_must_contain_permission' => true
 	],
+	/*
+	 *
+	 */
+	'base_roles' => [
+		'patient' => 1,
+		'practitioner' => 2,
+		'staff' => 3
+	]
 );

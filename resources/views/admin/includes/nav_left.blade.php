@@ -17,13 +17,13 @@
 				</div>
 			</div>
 		</li>
-		<li class="{{ Active::route('backend.dashboard') }}"><a href="{{ route('backend.dashboard') }}"><i class="material-icons">dashboard</i> {{ trans('menus.dashboard') }}</a></li>
-		<li class='{{ Active::route("backend.calendar") }}'><a href="{{ route('backend.calendar') }}"><i class="material-icons">event</i> {{ trans('menus.calendar') }}</a></li>
-		<li class="{{ Active::route('backend.patient') }}"><a href="{{ route('backend.patient') }}"><i class="material-icons">people</i> {{ trans('menus.patient') }}</a></li>
-		<li class="{{ Active::route('backend.service') }}"><a href="{{ route('backend.service') }}"><i class="material-icons">card_giftcard</i> {{ trans('menus.service') }}</a></li>
-		<li class="{{ Active::route('backend.practitioner') }}"><a href="{{ route('backend.practitioner') }}"><i class="material-icons">supervisor_account</i> {{ trans('menus.practitioner') }}</a></li>
-		<li class="{{ Active::route('backend.appointment') }}"><a href="{{ route('backend.appointment') }}"><i class="material-icons">schedule</i> {{ trans('menus.appointment') }}</a></li>
-		<li class="{{ Active::route('backend.report') }}"><a href="{{ route('backend.report') }}"><i class="material-icons">insert_chart</i> {{ trans('menus.report') }} </a></li>
+		<li class="{{ Active::route('admin.dashboard') }}"><a href="{{ route('admin.dashboard') }}"><i class="material-icons">dashboard</i> {{ trans('menus.dashboard') }}</a></li>
+		<li class='{{ Active::route("admin.calendar") }}'><a href="{{ route('admin.calendar') }}"><i class="material-icons">event</i> {{ trans('menus.calendar') }}</a></li>
+		<li class="{{ Active::route('admin.patient') }}"><a href="{{ route('admin.patient') }}"><i class="material-icons">people</i> {{ trans('menus.patient') }}</a></li>
+		<li class="{{ Active::route('admin.service') }}"><a href="{{ route('admin.service') }}"><i class="material-icons">card_giftcard</i> {{ trans('menus.service') }}</a></li>
+		<li class="{{ Active::route('admin.practitioner') }}"><a href="{{ route('admin.practitioner') }}"><i class="material-icons">supervisor_account</i> {{ trans('menus.practitioner') }}</a></li>
+		<li class="{{ Active::route('admin.appointment') }}"><a href="{{ route('admin.appointment') }}"><i class="material-icons">schedule</i> {{ trans('menus.appointment') }}</a></li>
+		<li class="{{ Active::route('admin.report') }}"><a href="{{ route('admin.report') }}"><i class="material-icons">insert_chart</i> {{ trans('menus.report') }} </a></li>
 		<li class="no-hover">
 			<ul class="collapsible" data-collapsible="accordion">
 				<li>
@@ -32,9 +32,9 @@
 					</a>
 					<div class="collapsible-body" style="display: none;">
 						<ul>
-							<li><a href="{{ route('backend.report', ['type' => 'email']) }}"><i class="material-icons">email</i> {{ trans('menus.email_reminder') }} </a>
+							<li><a href="{{ route('admin.report', ['type' => 'email']) }}"><i class="material-icons">email</i> {{ trans('menus.email_reminder') }} </a>
 							</li>                                        
-							<li><a href="{{ route('backend.report', ['type' => 'call']) }}"><i class="material-icons">call</i> {{ trans('menus.call_reminder') }} </a>
+							<li><a href="{{ route('admin.report', ['type' => 'call']) }}"><i class="material-icons">call</i> {{ trans('menus.call_reminder') }} </a>
 							</li>
 						</ul>
 					</div>
@@ -45,11 +45,11 @@
 					</a>
 					<div class="collapsible-body" style="display: none;">
 						<ul>
-							<li><a href="{{ route('backend.setting.schedule') }}"><i class="material-icons">alarm</i> {{ trans('menus.schedule') }}</a>
+							<li><a href="{{ route('admin.setting.schedule') }}"><i class="material-icons">alarm</i> {{ trans('menus.schedule') }}</a>
 							</li>                                        
 							<li><a href="{{ url('/admin/access/users') }}"><i class="material-icons">supervisor_account</i> {{ trans('menus.user') }}</a>
 							</li>
-							<li><a href="{{ route('backend.setting.account') }}"><i class="material-icons">info</i> {{ trans('menus.account_info') }}</a>
+							<li><a href="{{ route('admin.setting.account') }}"><i class="material-icons">info</i> {{ trans('menus.account_info') }}</a>
 							</li>
 							<li><a href="{{ route('logout') }}"><i class="material-icons">power_settings_new</i> {{ trans('menus.logout') }}</a>
 							</li>

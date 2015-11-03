@@ -5,11 +5,7 @@
  <ul id="accountDropdown" class="dropdown-content " style="overflow:visible;">
  	<li>{!! link_to('dashboard', trans('navs.dashboard')) !!}</li>
  	<li>{!! link_to('auth/password/change', trans('navs.change_password')) !!}</li>
-
- 	@if (access()->can('view-backend'))
  	<li>{!! link_to_route('backend.dashboard', trans('navs.administration')) !!}</li>
- 	@endif
-
  	<li>{!! link_to('auth/logout', trans('navs.logout')) !!}</li>
  </ul>
  <nav class="white pl20">

@@ -21,26 +21,13 @@
         <![endif]-->
     </head>
     <body>
-        @include('backend.includes.nav_top')
+        <header></header>
         <main>
-          @include('backend.includes.nav_left')
-          <section class="content-header-wrapper grey lighten-3">
-            <div class="container">
-              <div class="row">
-              @yield('page-header')
-              <ol class="breadcrumb">
-                @yield('breadcrumbs')
-              </ol>
-            </div>
-            </div>
-          </section>
           <section class="container content">
             @include('includes.partials.messages')
             @yield('content')
           </section>
-          @include('backend.includes.nav_right')
         </main>
-        @include('backend.includes.footer')
-        
+        @include('admin.includes.footer')
     </body>
 </html>

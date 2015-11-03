@@ -13,8 +13,11 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Qclinic\Events\SomeEvent' => [
-            'Qclinic\Listeners\EventListener',
+        'Qclinic\Events\UserWasCreated' => [
+            'Qclinic\Listeners\UserCreatedConfirmation',
+        ],
+        'Qclinic\Events\AccountWasCreated' => [
+            'Qclinic\Listeners\AccountCreatedConfirmation',
         ],
     ];
 
