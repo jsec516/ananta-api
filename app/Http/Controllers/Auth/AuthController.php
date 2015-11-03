@@ -21,8 +21,8 @@ class AuthController extends Controller
     |
     */
 
-    protected $redirectTo = '/admin/dashboard';
-    protected $redirectPath = '/admin/dashboard';
+    protected $redirectTo = '/dashboard';
+    protected $redirectPath = '/dashboard';
     protected $loginPath = '/login';
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
@@ -81,4 +81,6 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+   
 }

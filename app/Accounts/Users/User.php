@@ -59,7 +59,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         return $query->whereExists(function ($query) {
             $query->select(DB::raw(1))
             ->from(config('access.roles_table'))
-            ->whereRaw(config('access.roles_table')'.user_id = '.$this->table.'.id and role_id='.config('access.base_roles.practitioner'));
+            ->whereRaw(config('access.roles_table').'.user_id = '.$this->table.'.id and role_id='.config('access.base_roles.practitioner'));
         });
     }
 
@@ -73,7 +73,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         return $query->whereExists(function ($query) {
             $query->select(DB::raw(1))
             ->from(config('access.roles_table'))
-            ->whereRaw(config('access.roles_table')'.user_id = '.$this->table.'.id and role_id='.config('access.base_roles.patient'));
+            ->whereRaw(config('access.roles_table').'.user_id = '.$this->table.'.id and role_id='.config('access.base_roles.patient'));
         });
     }
 
@@ -87,7 +87,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         return $query->whereExists(function ($query) {
             $query->select(DB::raw(1))
             ->from(config('access.roles_table'))
-            ->whereRaw(config('access.roles_table')'.user_id = '.$this->table.'.id and role_id='.config('access.base_roles.staff'));
+            ->whereRaw(config('access.roles_table').'.user_id = '.$this->table.'.id and role_id='.config('access.base_roles.staff'));
         });
     }
 

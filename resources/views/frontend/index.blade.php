@@ -2,14 +2,14 @@
 @section('content')
 
 <div class="row nf-container center-align">
-	<div class="col s12">
-		<img src="{{ asset('assets/images/long-logo.png') }}" />
-	</div>
-	<div class="col s12 center-container">
-		<h1 class="white-text">Qclinic.com</h1>
-		<h2 class="white-text normal">It's so simple, you'll love it!</h2>
-	</div>
-	<div class="col s12 l5 center-container">
+  <div class="col s12">
+    <img src="{{ asset('assets/images/long-logo.png') }}" />
+  </div>
+  <div class="col s12 center-container">
+    <h1 class="white-text">Qclinic.com</h1>
+    <h2 class="white-text normal">It's so simple, you'll love it!</h2>
+  </div>
+  <div class="col s12 l5 center-container">
    <div class="card">
     <div class="card-content">
       <div class="row">
@@ -26,4 +26,3 @@
   </div>
 </div>
 @endsection
-
