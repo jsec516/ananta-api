@@ -14,7 +14,7 @@ return [
     */
 
     'my_information' => 'My Information',
-    'change_password' => 'Change Password',
+    'user_setting' => 'Account Settings',
     'administration' => 'Administration',
     'dashboard' => 'Dashboard',
     'home' => 'Home',

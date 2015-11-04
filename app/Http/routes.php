@@ -32,12 +32,17 @@ $router->group(['namespace' => 'Auth'], function () use ($router)
 	$router->group(['middleware' => 'auth'], function ()
 	{
 		get('logout', 'AuthController@getLogout')->name('logout');
-		get('password/change', 'PasswordController@getChangePassword');
 		post('password/change', 'PasswordController@postChangePassword')->name('password.change');
 	});
 	
 });
 
+// frontend routes for authenticated auser
+$router->group(['namespace' => 'Frontend', 'middleware' => ['auth']], function () use ($router)
+{
+	get('dashboard', 'DashboardController@getIndex')->name('dashboard');
+	get('account/settings', 'UserController@getSettings')->name('user.setting');
+});
 
 
 Route::group(['middleware' => ['auth', 'confirmed'], 'before' => 'has_role:manage_users', 'prefix' => 'admin', 'namespace' => 'Admin'], function() {

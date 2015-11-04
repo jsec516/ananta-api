@@ -99,6 +99,9 @@ footer.page-footer {
   font-size: 24px;
   background: url(../images/short-logo.jpg) no-repeat left center; }
 
+.mw200 {
+  min-width: 200px; }
+
 main {
   background-color: #00bcd4;
   border-top: 3px solid #0097a7; }

@@ -31,9 +31,14 @@ class UserPresenter extends BasePresenter
             ->toFormattedDateString();
     }
 
+    public function circle_thumbnail()
+    {
+        return '<img class="circle responsive-img" src="' . $this->image_url . '&size=50" alt="' . $this->getWrappedObject()->name . '">';
+    }
+
     public function thumbnail()
     {
-        return '<img src="' . $this->image_url . '&size=50" alt="' . $this->getWrappedObject()->name . '">';
+        return '<img class="responsive-img" src="' . $this->image_url . '&size=50" alt="' . $this->getWrappedObject()->name . '">';
     }
 
     public function imageMedium()

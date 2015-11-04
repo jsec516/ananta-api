@@ -22,9 +22,9 @@ showFilters : function(){
 	$("#modal1").openModal();
 },
 cancelForm: function(elem){
-    $("#"+elem+"Form").removeClass('hide');  
+    $("#"+elem+"Form").hide();  
     $("#"+elem).show();
-} };
+}};
 (function($){
 	$(document).ready(function(){
 		// Initialize collapse button

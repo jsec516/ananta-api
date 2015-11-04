@@ -5,10 +5,11 @@ namespace Qclinic\Http\Controllers\Frontend;
 use Qclinic\Http\Controllers\Controller;
 
 /**
- * Class FrontendController
- * @package Qclinic\Http\Controllers
+ * Class UserController
+ * @package Qclinic\Http\Controllers\Frontend
  */
-class DashboardController extends Controller {
+class UserController extends Controller 
+{
 
 	/**
 	 * Check to see if the application is installed
@@ -20,7 +21,7 @@ class DashboardController extends Controller {
 	/**
 	 * @return \Illuminate\View\View
 	 */
-	public function getIndex()
+	public function getSettings()
 	{
 		javascript()->put([
 			'test' => 'it works!'

@@ -410,6 +410,9 @@ h2.header2 {
   margin: 0;
   margin-bottom: 30px; }
 
+.mw200 {
+  min-width: 200px; }
+
 .dataTables_wrapper .dataTables_paginate {
   float: right; }
 
