@@ -32,9 +32,6 @@
         <![endif]-->
 
         <main class="cyan">
-            <div class="row">
-                @include('includes.partials.messages')
-            </div><!-- container -->
             @yield('content')
         </main>
         @include('frontend.includes.footer')

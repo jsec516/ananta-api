@@ -1,5 +1,11 @@
 <?php
 
+// Route::group(['domain' => '{account}.qclinic.dev'], function () {
+// 	Route::get('user/{id}', function ($account, $id) {
+
+// 	});
+// });
+
 $router->group(['namespace' => 'Frontend', 'middleware' => 'guest'], function () use ($router)
 {
 	get('/', 'FrontendController@index')->name('login');
@@ -44,7 +50,7 @@ $router->group(['namespace' => 'Frontend', 'middleware' => ['auth']], function (
 	get('account/settings', 'UserController@getSettings')->name('user.setting');
 });
 
-
-Route::group(['middleware' => ['auth', 'confirmed'], 'before' => 'has_role:manage_users', 'prefix' => 'admin', 'namespace' => 'Admin'], function() {
+// admininstration routes
+Route::group(['middleware' => ['auth'], 'before' => 'has_role:manage_users', 'prefix' => 'admin', 'namespace' => 'Admin'], function() {
 	Route::get('/', ['as' => 'admin.dashboard', 'uses' => 'DashboardController@index']);
 });

@@ -4,6 +4,12 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
+    "repositories": [
+        {
+            "url": "https://github.com/tuwannu/entrust.git",
+            "type": "git"
+        }
+    ],
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
@@ -15,7 +21,8 @@
         "hieu-le/active": "~2.0",
         "chumper/datatable": "dev-develop",
         "doctrine/dbal": "^2.5",
-        "mccool/laravel-auto-presenter": "~4.1"
+        "mccool/laravel-auto-presenter": "~4.1",
+        "zizaco/entrust": "dev-middlewaretest-fix"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

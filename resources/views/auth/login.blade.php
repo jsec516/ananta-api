@@ -2,6 +2,15 @@
 @section('form_heading')
 Login to your account
 @endsection
+@section('form_messages')
+@if ($errors->any())
+<div class="col s12 red lighten-4 white-text text-lighten-2 mb30">
+	@foreach ($errors->all() as $error)
+	{!! $error !!}<br/>
+	@endforeach
+</div>
+@endif
+@endsection
 @section('form')
 {{Former::framework('Nude')}}
 {!! Former::open(url('login'))->addClass('col s12')->method('post') !!}

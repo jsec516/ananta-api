@@ -14,6 +14,7 @@
     <div class="card-content">
       <div class="row">
         <h1 class="cyan-text text-lighten-2 xlarge"> @yield('form_heading') </h1>
+        @yield('form_messages')
         @yield('form')
       </div>
     </div>

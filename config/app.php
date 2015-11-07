@@ -153,6 +153,7 @@ return [
         Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
         HieuLe\Active\ActiveServiceProvider::class,
         Chumper\Datatable\DatatableServiceProvider::class,
+        Zizaco\Entrust\EntrustServiceProvider::class,
 
         /**
         * Third party providers
@@ -213,6 +214,7 @@ return [
         'Countries' => Webpatser\Countries\CountriesFacade::class,
         'Active'    => HieuLe\Active\Facades\Active::class,
         'Datatable' => Chumper\Datatable\Facades\DatatableFacade::class,
+        'Entrust'   => Zizaco\Entrust\EntrustFacade::class
     ],
 
 ];
